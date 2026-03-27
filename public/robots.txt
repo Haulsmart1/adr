@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://adrcarriers.com
+
+# Sitemaps
+Sitemap: https://adrcarriers.com/sitemap.xml
