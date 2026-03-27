@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 
 export default function GetAQuotePage() {
     const [form, setForm] = useState({
@@ -10,46 +9,66 @@ export default function GetAQuotePage() {
         phone: '',
         details: '',
     });
+
     const [status, setStatus] = useState('');
+    const [isSending, setIsSending] = useState(false);
 
     const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+
+        setForm((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        emailjs
-            .send(
-                'service_ns4pt5e',
-                'template_ypy8zsd',
-                {
-                    name: form.name,
-                    email: form.email,
-                    phone: form.phone,
-                    message: form.details,
+        if (isSending) return;
+
+        setIsSending(true);
+        setStatus('');
+
+        try {
+            const response = await fetch('/api/send-quote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-                'OJVXVHUX28YtsdtBH'
-            )
-            .then(() => {
-                setStatus('✅ Quote request sent successfully!');
-                setForm({ name: '', email: '', phone: '', details: '' });
-            })
-            .catch((error) => {
-                console.error(error);
-                setStatus('❌ Something went wrong. Please try again.');
+                body: JSON.stringify(form),
             });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                setStatus('Quote request sent successfully!');
+                setForm({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    details: '',
+                });
+            } else {
+                setStatus(result.message || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus('Something went wrong. Please try again.');
+        } finally {
+            setIsSending(false);
+        }
     };
 
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 py-16 overflow-hidden">
-            {/* 🌄 Background Image */}
             <div
                 className="absolute inset-0 bg-[url('/quote-bg.jpg')] bg-cover bg-center opacity-80"
                 aria-hidden="true"
             />
 
-            {/* 📄 Content Container */}
+            <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
+
             <div className="relative z-10 max-w-2xl w-full bg-white/90 shadow-lg rounded-lg p-8">
                 <h1 className="text-3xl font-bold text-center mb-6">Get a Quote</h1>
                 <p className="text-center text-gray-700 mb-8">
@@ -68,6 +87,7 @@ export default function GetAQuotePage() {
                             className="mt-1 w-full border border-gray-300 rounded-md p-2"
                         />
                     </div>
+
                     <div>
                         <label className="block text-sm font-medium">Email Address</label>
                         <input
@@ -79,6 +99,7 @@ export default function GetAQuotePage() {
                             className="mt-1 w-full border border-gray-300 rounded-md p-2"
                         />
                     </div>
+
                     <div>
                         <label className="block text-sm font-medium">Phone Number</label>
                         <input
@@ -89,6 +110,7 @@ export default function GetAQuotePage() {
                             className="mt-1 w-full border border-gray-300 rounded-md p-2"
                         />
                     </div>
+
                     <div>
                         <label className="block text-sm font-medium">Shipment Details</label>
                         <textarea
@@ -103,9 +125,10 @@ export default function GetAQuotePage() {
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition"
+                        disabled={isSending}
+                        className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-70 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-md transition"
                     >
-                        Submit Request
+                        {isSending ? 'Sending...' : 'Submit Request'}
                     </button>
 
                     {status && (
