@@ -1,91 +1,198 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 export default function ContactForm() {
-    const [form, setForm] = useState({ name: '', email: '', message: '' });
+
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
     const [status, setStatus] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    // initialise EmailJS once
+    useEffect(() => {
+
+        if (!PUBLIC_KEY) {
+            console.error('Missing EmailJS public key');
+            return;
+        }
+
+        emailjs.init({
+            publicKey: PUBLIC_KEY
+        });
+
+    }, []);
 
     const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+
+        const { name, value } = e.target;
+
+        setForm(prev => ({
+            ...prev,
+            [name]: value
+        }));
+
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+
         e.preventDefault();
 
-        emailjs
-            .send(
-                'service_ns4pt5e',          // ✅ Your Service ID
-                'template_ypy8zsd',         // ✅ Your Template ID
+        setLoading(true);
+        setStatus('');
+
+        try {
+
+            if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+
+                throw new Error('EmailJS environment variables missing');
+
+            }
+
+            const response = await emailjs.send(
+
+                SERVICE_ID,
+                TEMPLATE_ID,
                 {
                     name: form.name,
                     email: form.email,
-                    message: form.message,
-                },
-                'OJVXVHUX28YtsdtBH'          // ✅ Your Public Key
-            )
-            .then(
-                () => {
-                    setStatus('✅ Message sent successfully!');
-                    setForm({ name: '', email: '', message: '' }); // Clear form
-                },
-                (error) => {
-                    console.error(error);
-                    setStatus('❌ Failed to send. Please try again later.');
+                    message: form.message
                 }
+
             );
+
+            console.log('EmailJS success', response);
+
+            setStatus('✅ Message sent successfully');
+
+            setForm({
+                name: '',
+                email: '',
+                message: ''
+            });
+
+        } catch (error) {
+
+            console.error('EmailJS error', error);
+
+            setStatus(
+                `❌ Failed to send message: ${error?.text ||
+                error?.message ||
+                'Unknown error'
+                }`
+            );
+
+        } finally {
+
+            setLoading(false);
+
+        }
+
     };
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6">
+
+        <form
+            onSubmit={handleSubmit}
+            className="space-y-6"
+        >
+
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+
+                <label className="block text-sm font-medium mb-1">
+
+                    Name
+
+                </label>
+
                 <input
                     type="text"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-md"
                 />
+
             </div>
 
+
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+
+                <label className="block text-sm font-medium mb-1">
+
+                    Email
+
+                </label>
+
                 <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-md"
                 />
+
             </div>
 
+
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+
+                <label className="block text-sm font-medium mb-1">
+
+                    Message
+
+                </label>
+
                 <textarea
                     name="message"
                     rows="5"
                     value={form.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-md"
                 />
+
             </div>
 
-            <div className="text-center">
-                <button
-                    type="submit"
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition"
-                >
-                    Send Message
-                </button>
-            </div>
 
-            {status && <p className="text-center text-sm mt-4">{status}</p>}
+            <button
+
+                type="submit"
+
+                disabled={loading}
+
+                className="bg-blue-600 text-white px-6 py-2 rounded-md disabled:opacity-50"
+
+            >
+
+                {loading ? 'Sending...' : 'Send Message'}
+
+            </button>
+
+
+            {status && (
+
+                <p className="text-sm mt-4">
+
+                    {status}
+
+                </p>
+
+            )}
+
         </form>
-    );
-}
 
+    );
+
+}
