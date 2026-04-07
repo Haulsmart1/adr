@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 
-export default function ContactForm() {
+export default function QuoteForm() {
     const [form, setForm] = useState({
-        name: '',
+        fullName: '',
         email: '',
-        message: '',
+        phone: '',
+        shipmentDetails: '',
     });
     const [status, setStatus] = useState('');
     const [loading, setLoading] = useState(false);
@@ -32,30 +33,32 @@ export default function ContactForm() {
                     Accept: 'application/json',
                 },
                 body: JSON.stringify({
-                    name: form.name,
+                    fullName: form.fullName,
                     email: form.email,
-                    message: form.message,
-                    _subject: 'New enquiry from ADR website',
-                    _captcha: 'false',
+                    phone: form.phone,
+                    shipmentDetails: form.shipmentDetails,
+                    _subject: 'New Quote Request - ADR Carriers',
                     _template: 'table',
+                    _captcha: 'false',
                 }),
             });
 
             const data = await response.json();
 
-            if (!response.ok || data.success !== 'true') {
-                throw new Error(data.message || 'Failed to send form');
+            if (!response.ok) {
+                throw new Error(data.message || 'Failed');
             }
 
-            setStatus('✅ Message sent successfully!');
+            setStatus('✅ Quote request sent successfully!');
             setForm({
-                name: '',
+                fullName: '',
                 email: '',
-                message: '',
+                phone: '',
+                shipmentDetails: '',
             });
         } catch (error) {
-            console.error('FormSubmit error:', error);
-            setStatus('❌ Failed to send. Please try again later.');
+            console.error(error);
+            setStatus('❌ Something went wrong. Please try again.');
         } finally {
             setLoading(false);
         }
@@ -64,11 +67,13 @@ export default function ContactForm() {
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <label className="block text-sm font-medium text-gray-800 mb-1">
+                    Full Name
+                </label>
                 <input
                     type="text"
-                    name="name"
-                    value={form.name}
+                    name="fullName"
+                    value={form.fullName}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -76,7 +81,9 @@ export default function ContactForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <label className="block text-sm font-medium text-gray-800 mb-1">
+                    Email Address
+                </label>
                 <input
                     type="email"
                     name="email"
@@ -88,11 +95,27 @@ export default function ContactForm() {
             </div>
 
             <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <label className="block text-sm font-medium text-gray-800 mb-1">
+                    Phone Number
+                </label>
+                <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+            </div>
+
+            <div>
+                <label className="block text-sm font-medium text-gray-800 mb-1">
+                    Shipment Details
+                </label>
                 <textarea
-                    name="message"
+                    name="shipmentDetails"
                     rows={5}
-                    value={form.message}
+                    value={form.shipmentDetails}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -105,7 +128,7 @@ export default function ContactForm() {
                     disabled={loading}
                     className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition disabled:opacity-50"
                 >
-                    {loading ? 'Sending...' : 'Send Message'}
+                    {loading ? 'Sending...' : 'Submit Request'}
                 </button>
             </div>
 
