@@ -1,0 +1,14 @@
+.publicQuote { color: #fff; overflow-wrap: anywhere; }
+.publicQuote nav { margin-bottom: 1rem; }
+.publicQuote a { color: #ffbf75; }
+.publicQuote input, .publicQuote select, .publicQuote textarea { min-width: 0; max-width: 100%; margin-bottom: 1rem; }
+.publicQuote label { display: block; font-weight: 600; margin-top: .5rem; }
+.publicQuote input[type="checkbox"] { width: auto; margin-right: .5rem; }
+.publicQuote select option { background: #152c3f; color: #fff; }
+.publicQuote button { background: #f7ad58; color: #112a3e; border: 0; border-radius: .35rem; padding: .75rem 1rem; }
+.publicQuote button:disabled { background: #586775; color: #fff; cursor: not-allowed; }
+.publicQuote a:focus-visible, .publicQuote button:focus-visible, .publicQuote input:focus-visible, .publicQuote select:focus-visible, .publicQuote textarea:focus-visible { outline: 3px solid #f7ad58; outline-offset: 3px; }
+.heading { font-size: clamp(1.7rem, 5vw, 2.5rem); }
+.estimate { background: #152c3f; color: #fff; padding: 1rem; border: 1px solid #f7ad58; border-radius: .35rem; margin: 1rem 0; }
+.publicQuote .primaryLink { display: inline-block; padding: .85rem 1rem; border-radius: .35rem; background: #f7ad58; color: #112a3e; font-weight: 700; margin-bottom: 1rem; }
+@media(max-width: 480px) { .publicQuote { padding: 1rem; } }

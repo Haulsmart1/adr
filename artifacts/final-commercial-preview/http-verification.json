@@ -1,0 +1,333 @@
+{
+  "registrationRetired": true,
+  "base": "http://127.0.0.1:3031",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 1
+    },
+    {
+      "path": "/road-freight",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 1
+    },
+    {
+      "path": "/air-freight",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 1
+    },
+    {
+      "path": "/sea-freight",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 1
+    },
+    {
+      "path": "/time-critical-freight",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 1
+    },
+    {
+      "path": "/european-freight",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 1
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 0
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 0
+    },
+    {
+      "path": "/company-information",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 0
+    },
+    {
+      "path": "/register",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 0
+    },
+    {
+      "path": "/booking",
+      "status": 200,
+      "oneH1": true,
+      "oneDescription": true,
+      "canonical": true,
+      "schemas": 0
+    }
+  ],
+  "links": [
+    {
+      "path": "/images/fav.png",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/cf2a682595e08442.css",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/698a8faa03ca0ffc.css",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/road-freight",
+      "status": 200
+    },
+    {
+      "path": "/air-freight",
+      "status": 200
+    },
+    {
+      "path": "/sea-freight",
+      "status": 200
+    },
+    {
+      "path": "/time-critical-freight",
+      "status": 200
+    },
+    {
+      "path": "/european-freight",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/booking",
+      "status": 200
+    },
+    {
+      "path": "/blog",
+      "status": 200
+    },
+    {
+      "path": "/freight/liverpool-to-dublin",
+      "status": 200
+    },
+    {
+      "path": "/freight/liverpool-to-belfast",
+      "status": 200
+    },
+    {
+      "path": "/freight/southampton-to-plymouth",
+      "status": 200
+    },
+    {
+      "path": "/freight/london-to-manchester",
+      "status": 200
+    },
+    {
+      "path": "/freight-resources",
+      "status": 200
+    },
+    {
+      "path": "/about",
+      "status": 200
+    },
+    {
+      "path": "/contact",
+      "status": 200
+    },
+    {
+      "path": "/company-information",
+      "status": 200
+    },
+    {
+      "path": "/register",
+      "status": 200
+    },
+    {
+      "path": "/blog/routes/group-1",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/8caacb55a8eb65ac.css",
+      "status": 200
+    }
+  ],
+  "patterns": [
+    {
+      "path": "/auth/redirect",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-10",
+      "status": 200
+    },
+    {
+      "path": "/blog",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-1",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-3",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-2",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-4",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-5",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-9",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-8",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-6",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-7",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/admin/super/users/invite",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/admin/super/default",
+      "status": 200
+    },
+    {
+      "path": "/blog/routes/group-1",
+      "status": 200
+    },
+    {
+      "path": "/blog/oxford-to-helsinki",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/currys/admin/users",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/currys/bookings/all/bookings",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/partner/fastfreight",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/default",
+      "status": 307
+    },
+    {
+      "path": "/thank-you",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/partner/fastfreight/vehicles",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/partner/fastfreight/archive",
+      "status": 307
+    }
+  ],
+  "shared": [
+    {
+      "host": "express-pallets.app",
+      "status": 200,
+      "legacyHomepage": true,
+      "articleLinks": 2352
+    },
+    {
+      "host": "www.express-pallets.app",
+      "status": 200,
+      "legacyHomepage": true,
+      "articleLinks": 2352
+    },
+    {
+      "host": "lithiumbattery.app",
+      "status": 200,
+      "legacyHomepage": true,
+      "articleLinks": 2352
+    },
+    {
+      "host": "www.lithiumbattery.app",
+      "status": 200,
+      "legacyHomepage": true,
+      "articleLinks": 2352
+    }
+  ],
+  "articleUrls": 2352,
+  "sitemap": true,
+  "robots": true,
+  "auth": [
+    {
+      "path": "/api/auth/providers",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/session",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    }
+  ],
+  "squareDisabled": true,
+  "legacyCheckoutDisabled": true,
+  "quote": {
+    "status": 200,
+    "hasFiniteAmount": true
+  },
+  "emailsSent": 0,
+  "payments": 0
+}

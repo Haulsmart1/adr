@@ -1,0 +1,281 @@
+/* ===== Global Reset and Page Background ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(160deg, #1b1f3a 0%, #222c4f 100%);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+/* ===== Form Elements ===== */
+input,
+textarea,
+select {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #333;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #aaa !important;
+  opacity: 1 !important;
+}
+
+/* ===== Global Buttons ===== */
+button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* ===== Utility Layout Classes ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.75rem;
+}
+
+.col-12, .col-sm-6, .col-lg-4 {
+  padding: 0.75rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    width: 33.3333%;
+  }
+}
+
+/* ===== Sidebar Buttons ===== */
+.btn-sidebar {
+  display: block;
+  padding: 10px 16px;
+  margin-bottom: 1rem;
+  background-color: #222;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s all ease-in-out;
+}
+
+.btn-sidebar:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ===== Hero Section (if used) ===== */
+.hero {
+  background: url('/images/background-road.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  padding: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.nav-buttons button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: white;
+  color: black;
+}
+
+.select-lang {
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== Cards / Routes (if used) ===== */
+.routes-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.route-card {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid limegreen;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.route-card:hover {
+  transform: scale(1.03);
+}
+
+.route-card h2 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.route-card button {
+  width: 100%;
+  margin-top: 1rem;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.route-card button:hover {
+  background-color: white;
+  color: black;
+}
+
+.route-card button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== Cookie Bar ===== */
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.cookie-bar button {
+  margin-left: 1rem;
+  background: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ===== Neon Utility Styles ===== */
+.neon-container {
+  background: linear-gradient(145deg, #2a1a3d, #1f1430);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(255, 93, 206, 0.35), 0 0 40px rgba(0, 212, 255, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+.neon-input {
+  background: #191a2f;
+  border: 1.5px solid #0ff1ce;
+  border-radius: 12px;
+  color: #0aefff;
+  font-weight: 700;
+  padding: 10px 14px;
+  font-size: 1rem;
+  box-shadow: 0 0 7px #0ff1ce44;
+  margin-bottom: 0.75rem;
+}
+
+.neon-btn {
+  padding: 0.6em 1.3em;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.neon-primary {
+  background: linear-gradient(90deg, #ff7ee2, #9d6bff);
+  color: #fff;
+  box-shadow: 0 0 12px #ff7ee2cc;
+}
+
+.neon-secondary {
+  background: linear-gradient(90deg, #0ff1ce, #00d4ff);
+  color: #fff;
+  box-shadow: 0 0 12px #0ff1cecc;
+}
+
+.neon-success {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
+  box-shadow: 0 0 12px #00f2fecc;
+}
+
+.neon-error {
+  color: #ff5858;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(255, 88, 88, 0.6);
+}
+

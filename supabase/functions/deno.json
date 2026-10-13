@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.window"]
+  },
+  "tasks": {
+    "check": "deno check calculate-quote/index.ts"
+  }
+}

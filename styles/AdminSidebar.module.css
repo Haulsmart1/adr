@@ -1,0 +1,89 @@
+/* Sidebar container */
+.sidebar {
+  background: linear-gradient(180deg, #141629, #1c1c3b); /* Dark gradient */
+  color: white;
+  width: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 100vh;
+}
+
+/* Title at the top */
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0aefff;
+  letter-spacing: 0.5px;
+}
+
+/* Nav link item */
+.navItem {
+  display: block;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05); /* Glassy background */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Hover style */
+.navItem:hover {
+  background: #0aefff;
+  color: #000;
+  border-color: #0aefff;
+}
+
+/* Active style */
+.activeLink {
+  background: #fff !important;
+  color: #000 !important;
+  font-weight: bold;
+  border-color: #fff;
+}
+
+/* Logout button */
+.logout {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout:hover {
+  background: #ff4757;
+}
+
+/* Back to Dashboard link */
+.dashboardLinkWrapper {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dashboardLink {
+  color: #0aefff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dashboardLink:hover {
+  color: #fff;
+  text-decoration: underline;
+}

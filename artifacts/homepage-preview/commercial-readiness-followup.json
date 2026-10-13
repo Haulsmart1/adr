@@ -1,0 +1,42 @@
+{
+  "checkpoint": "ca9b531e0b742f4af5eff67b83aa4f6a55d96a0d",
+  "checkpointRecovered": true,
+  "workingTreeCleanAtRecovery": true,
+  "checkpointAmendedOrRecreated": false,
+  "followupSourceChange": "pages/contact.js",
+  "problem": "Contact form displayed Message sent without delivering an enquiry",
+  "result": "Direct operations phone/email links, road quote link, shipment checklist and availability qualification; no false submission confirmation",
+  "verification": {
+    "productionBuild": "passed",
+    "staticPagesGenerated": 161,
+    "renderedContactPage": "phone, email, road quote, canonical and single H1 checked; no form or false success message",
+    "preservedRoutePatterns": 23,
+    "homepageAndEuropeanMap": "unchanged from checkpoint",
+    "articleDataset": "unchanged from checkpoint",
+    "squareBoundary": "unchanged from checkpoint",
+    "squareCandidateTests": "retained checkpoint evidence: 71/71, including 21 Square tests; not unnecessarily rerun"
+  },
+  "commercialJourney": {
+    "road": "existing booking quote",
+    "airAndSea": "direct operations enquiries",
+    "timeCritical": "operations telephone",
+    "invoicePayments": "isolated Square Sandbox boundary, disabled until separately configured"
+  },
+  "pendingExternalWork": [
+    "Separate Midnight Square application and Sandbox configuration",
+    "Dedicated payment database migration and real database verification",
+    "Square Sandbox end-to-end payment/webhook exercise"
+  ],
+  "pendingSeparateAuthorization": [
+    "Homepage redesign production promotion",
+    "Commercial prices and live invoice payment activation"
+  ],
+  "followupDeployed": false,
+  "liveBillingEnabled": false,
+  "charges": 0,
+  "tmsWrites": 0,
+  "credentialsCopied": false,
+  "productionChanges": 0,
+  "dnsChanges": 0,
+  "productionBaseline": "696047c"
+}

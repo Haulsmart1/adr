@@ -1,0 +1,7 @@
+{
+  "status": 200,
+  "approximateLocations": true,
+  "fallbackLegs": 1,
+  "publicEstimateUsable": false,
+  "externalNetworkBlocked": true
+}

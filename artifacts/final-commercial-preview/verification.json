@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-13",
+  "branch": "stu-homepage-preview",
+  "recoveredHead": "c80c1ebeb0ce9ac8d136fe6f6d65a60d51a2a5c9",
+  "safeCheckpoint": "ca9b531e0b742f4af5eff67b83aa4f6a55d96a0d",
+  "recovery": {
+    "contactCorrectionSurvived": true,
+    "originalUncommittedFiles": 9,
+    "bytePreservingBackup": ".cache/recovery-20261013",
+    "reset": false,
+    "clean": false,
+    "checkout": false
+  },
+  "changes": [
+    "Preserved and completed surviving commercial quote, company information, about page, sitemap and response-header work",
+    "Public road enquiry prepares a copyable email brief; no false booking confirmation",
+    "Added cargo-ready time, forklift availability and dangerous-goods declarations",
+    "Withhold public prices when geocoding or mileage uses a fallback or route/amount evidence is incomplete",
+    "Replaced browser password/profile insertion and client-side account approval with an operations account enquiry; retired invalid public registration API",
+    "Corrected quote breakdown contrast"
+  ],
+  "verification": {
+    "testsPassed": 78,
+    "testsFailed": 0,
+    "squareBoundaryTestsPassed": 21,
+    "rootTypeScript": "passed",
+    "applicationTypeScript": "passed",
+    "productionBuild": "passed",
+    "staticPagesGenerated": 162,
+    "httpPages": 11,
+    "internalLinks": 23,
+    "preservedRoutePatterns": 23,
+    "articleUrls": 2352,
+    "sharedHosts": 4,
+    "browserPageViewportChecks": 20,
+    "browserExceptions": 0,
+    "automatedAccessibilityViolations": 0,
+    "homepageDesktopMobile": "passed before final routing-only changes; protected homepage source unchanged",
+    "homepageAccessibilityIncompleteCases": [
+      {
+        "device": "desktop",
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodeCount": 12
+          }
+        ]
+      },
+      {
+        "device": "mobile",
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodeCount": 11
+          }
+        ]
+      }
+    ],
+    "quoteBrowserScenarios": [
+      "real local API with all external network blocked: fallback price withheld and enquiry retained",
+      "intercepted complete-route fixture: estimate visible with readable breakdown",
+      "editing contact/time details does not recalculate route"
+    ],
+    "knownPrivateCredentialSourceAndClientMatches": 0,
+    "diffCheck": "passed"
+  },
+  "preservation": {
+    "homepageAndMapSourceMatchSafeCheckpoint": true,
+    "servicePageContentMatchSafeCheckpoint": true,
+    "articleDatasetMatchSafeCheckpoint": true,
+    "squareSourceAndSchemaMatchSafeCheckpoint": true
+  },
+  "boundaries": {
+    "deployments": 0,
+    "productionOperations": 0,
+    "productionBaselineFromPriorEvidence": "696047c",
+    "productionReinspected": false,
+    "dnsChanges": 0,
+    "tmsAccess": 0,
+    "credentialsCopied": false,
+    "customerCharges": 0,
+    "emailsSent": 0,
+    "liveBillingEnabled": false,
+    "databaseWrites": 0,
+    "hostedRegistrationPoliciesChanged": false
+  },
+  "limitations": [
+    "Browser success estimate uses an intercepted fixture; current external geocoding was not exercised",
+    "Public estimate guard does not change pricing policy or independently validate address accuracy",
+    "Existing underlying database grants and RLS were not altered or audited in this continuation",
+    "Security response headers are saved in vercel.json; no hosted deployment was made",
+    "Automated accessibility checks are not a full accessibility certification"
+  ],
+  "externalNextSteps": [
+    "Dedicated Midnight Square Sandbox application/customer configuration and isolated payment database",
+    "Real database migration/grant verification and Square Sandbox payment/webhook exercise",
+    "Separate production promotion and commercial invoice collection decisions; live billing remains disabled"
+  ],
+  "companyDetailsSource": "https://find-and-update.company-information.service.gov.uk/company/16353948",
+  "sourceFiles": [
+    {
+      "path": "lib/freight/publicQuote.cjs",
+      "sha256": "598fd848611ed3241532f63cd7faf16a71a75499320ba96b6a86929f14852a60"
+    },
+    {
+      "path": "pages/company-information.js",
+      "sha256": "c350acba9b8fad99aa62dab318323f2552f1d287d04f9c7ecf90b4c54ae46041"
+    },
+    {
+      "path": "scripts/public-quote.test.cjs",
+      "sha256": "2358c7c2bac9d0b9740407f17bd76b5ef4a0016db65aebbee568743fe01a0646"
+    },
+    {
+      "path": "styles/PublicQuote.module.css",
+      "sha256": "93ebda2a771031c000df57851f067947cbaac1443ebd95a618cbfcb832d6434b"
+    },
+    {
+      "path": "components/freight/FreightLayout.js",
+      "sha256": "65bec3630946655937a9eda47ad4574ad4d90222fad42cbc401d8c1a4d8f3148"
+    },
+    {
+      "path": "package.json",
+      "sha256": "8a634c9eb0ad2a80472a1790ac05218344e5d96ec13bc474d7235deb372a4ac5"
+    },
+    {
+      "path": "pages/_document.js",
+      "sha256": "739aafaaddf78adc0fc171f2c2c904b43a851ed27bf8e30d5edfe4874dddb746"
+    },
+    {
+      "path": "pages/about.js",
+      "sha256": "27e50eaf505963772efd76cf87f10768dd57c4b54a6ab10d84ee220f8c236725"
+    },
+    {
+      "path": "pages/api/quote.js",
+      "sha256": "56e56595230acad964ee1df86d534389934dff176e64162a4216efde86e4f88d"
+    },
+    {
+      "path": "pages/api/register.js",
+      "sha256": "319293c19ee530c9a57a10e8e9ad1466a2a533f86d3c7b686388b4056a52ba01"
+    },
+    {
+      "path": "pages/api/sitemap.js",
+      "sha256": "1be83740c27f7b86f2ac12e873e52d99b458d785234d17eafcff23248b639d95"
+    },
+    {
+      "path": "pages/booking.js",
+      "sha256": "b08f49d7b5eed25a91e46a90300b7e4332f6d9472e01572ff664f6df47b00766"
+    },
+    {
+      "path": "pages/contact.js",
+      "sha256": "ad4badf2c7696ae46f8bea36ea569f5d2e2c8c4c9b5b6e3163b2ade5d910f00f"
+    },
+    {
+      "path": "pages/register.js",
+      "sha256": "bb8c72d293d9994a636b125d67bd37a7115414438374b17f5de597174251f35d"
+    },
+    {
+      "path": "scripts/routing.test.cjs",
+      "sha256": "7f790826bb11b5aca0f6a372cb72cafa17bd0ff053a4a5584c13b226107be0a3"
+    },
+    {
+      "path": "scripts/security.test.cjs",
+      "sha256": "fae692fc5449341c606ae698454f902dce14ed2ff83363085c68a63c0eb9a85b"
+    },
+    {
+      "path": "utils/getTomTomCoords.js",
+      "sha256": "c8ed388eda9b52983b89b737e35fb06349c6cca560335b975b615517832baecd"
+    },
+    {
+      "path": "utils/getTomTomMileage.js",
+      "sha256": "174b013490160d6a87d3498c4c19e7a93f424c8c82cbfe82e636bb43b71b5fe7"
+    },
+    {
+      "path": "utils/resolveRoute.js",
+      "sha256": "2f5ac7ec809e5f8d3d7e7db04ba456ac0ed9c950f490e926346eb0e024471be4"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "e981a5a79f02d5d0548c07972e832910effc95574cbacda064432fa8f5bc0433"
+    }
+  ]
+}

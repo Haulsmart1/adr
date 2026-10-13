@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-10-12",
+  "branch": "stu-homepage-preview",
+  "candidateCommit": "7bca27f9c3a8c8c0edebfda5ff379be7dff3caad",
+  "preview": "https://midex-clean-midex-bk7idyns6-haulsmart.vercel.app",
+  "previewState": "READY",
+  "reusedExistingDeployment": true,
+  "newDeployments": 0,
+  "productionRelease": "696047c",
+  "productionDeployment": "dpl_HEwd5hHJQem5LjDCho3CWh485UKF",
+  "productionAliasesConfirmed": 6,
+  "productionChecks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "host": "midnight-xpress.com",
+        "status": 307,
+        "location": "https://www.midnight-xpress.com/"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "host": "www.midnight-xpress.com",
+        "status": 200,
+        "buildId": "WvK8mNrQlQgfctSu1a6ma"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "host": "express-pallets.app",
+        "status": 307,
+        "location": "https://www.express-pallets.app/"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "host": "www.express-pallets.app",
+        "status": 200,
+        "buildId": "WvK8mNrQlQgfctSu1a6ma"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "host": "lithiumbattery.app",
+        "status": 307,
+        "location": "https://www.lithiumbattery.app/"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "host": "www.lithiumbattery.app",
+        "status": 200,
+        "buildId": "WvK8mNrQlQgfctSu1a6ma"
+      }
+    }
+  ],
+  "previewChecks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/european-freight",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/images/freight/europe.svg",
+        "status": 200,
+        "noindex": "noindex",
+        "labels": [
+          "UK",
+          "IRELAND",
+          "FRANCE",
+          "BELGIUM",
+          "NETHERLANDS",
+          "GERMANY",
+          "SPAIN",
+          "PORTUGAL",
+          "ITALY",
+          "DENMARK",
+          "NORWAY",
+          "SWEDEN",
+          "FINLAND",
+          "POLAND",
+          "ESTONIA",
+          "LATVIA",
+          "LITHUANIA"
+        ],
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/road-freight",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/air-freight",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/sea-freight",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/time-critical-freight",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/freight-resources",
+        "status": 200,
+        "noindex": "noindex",
+        "articleLinks": 2352,
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/api/auth/providers",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/api/auth/session",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/api/sitemap",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/login",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "/booking",
+        "status": 200,
+        "noindex": "noindex",
+        "prohibitedPromotion": false
+      }
+    }
+  ],
+  "homepageCheck": {
+    "status": 200,
+    "countries": 17,
+    "availabilityQualification": true,
+    "quoteAndOperationsLinks": true
+  },
+  "existingEvidence": "artifacts/homepage-preview/verification.json",
+  "screenshotsPreserved": true,
+  "uncommittedFilePreserved": "supabase/functions/deno.json",
+  "sourceChanges": 0,
+  "dnsChanges": 0,
+  "productionPromotions": 0,
+  "status": "MIDNIGHT ROAD AIR SEA + FULL EUROPEAN COVERAGE PREVIEW — READY FOR STUART"
+}

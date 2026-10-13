@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-13",
+  "sourceCommit": "fb42d783882d0844287d76f24bc83827dd6216cd",
+  "url": "https://midex-clean-midex-ks55z99mc-haulsmart.vercel.app",
+  "deploymentId": "dpl_C9fKdBMtsipU8kRwAfHSL9vSY6m1",
+  "target": "preview",
+  "state": "READY",
+  "framework": "Next.js 15.5.27",
+  "node": "22.x",
+  "buildDurationMs": 64771,
+  "protection": "Vercel Authentication retained; verification used a scoped bypass cookie stored only in ignored cache",
+  "verification": {
+    "publicPages": 12,
+    "historicalRoutePatterns": 23,
+    "articleUrlsInSitemap": 2352,
+    "localArticleUrlsHttp200": 2352,
+    "commercialBrowserPageViewports": 22,
+    "homepageViewports": 2,
+    "browserExceptions": 0,
+    "automatedAccessibilityViolations": 0,
+    "enquiryDeliveryDisabled": true,
+    "squareDisabled": true,
+    "legacyCheckoutDisabled": true,
+    "securityHeaders": true
+  },
+  "productionAfter": {
+    "deploymentId": "dpl_HEwd5hHJQem5LjDCho3CWh485UKF",
+    "commit": "696047c3c9db2958f42e8d1e606ba6c55af009d3",
+    "unchanged": true
+  },
+  "effects": {
+    "emailsSent": 0,
+    "charges": 0,
+    "tmsWrites": 0,
+    "dnsChanges": 0,
+    "productionPromotions": 0
+  },
+  "limitations": [
+    "Mail server/inbox receipt requires isolated SMTP and Redis configuration plus controlled provider tests",
+    "Square Sandbox and isolated payment database end-to-end verification remain external",
+    "Image-backed homepage contrast includes axe incomplete checks",
+    "Legal approval and production promotion remain reserved"
+  ]
+}

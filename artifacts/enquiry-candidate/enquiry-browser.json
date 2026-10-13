@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "violations": [],
+      "overflow": false,
+      "draftRestore": true,
+      "dgConditional": true
+    },
+    {
+      "width": 390,
+      "violations": [],
+      "overflow": false,
+      "draftRestore": true,
+      "dgConditional": true
+    },
+    {
+      "width": 1440,
+      "violations": [],
+      "overflow": false,
+      "draftRestore": true,
+      "dgConditional": true
+    }
+  ],
+  "errors": [],
+  "posts": 4,
+  "actualEmails": 0,
+  "apiUnavailable": true,
+  "acceptedState": "intercepted fixture",
+  "unconfirmedState": "intercepted fixture",
+  "networkTimeout": "25 second abort verified",
+  "refreshDoesNotResend": true
+}
