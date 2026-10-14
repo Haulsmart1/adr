@@ -1,0 +1,5 @@
+{
+  "base": "https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app",
+  "unauthenticatedStatus": 302,
+  "protected": true
+}

@@ -52,13 +52,12 @@ export default function LoginPage() {
       // Map aliases like "users" to "user"
       normalizedRoles = normalizedRoles.map((r) => (r === 'users' ? 'user' : r));
 
-      // DEBUG (optional)
-      console.log('✅ Normalized roles:', normalizedRoles);
-
       if (normalizedRoles.includes('currys_admin')) {
         router.replace('/dashboard/currys');
       } else if (normalizedRoles.includes('super_admin')) {
-        router.replace('/dashboard/admin/super');
+        router.replace('/operations/enquiries');
+      } else if (normalizedRoles.includes('customer')) {
+        router.replace('/enquiry');
       } else if (normalizedRoles.includes('admin')) {
         router.replace('/dashboard/admin');
       } else if (normalizedRoles.includes('forwarder')) {
@@ -77,7 +76,7 @@ export default function LoginPage() {
         setError('Login succeeded but no valid role assigned. Please contact support.');
       }
     } catch (err) {
-      console.error('Login error:', err);
+      console.error('Login unavailable');
       setLoading(false);
       setError('Unexpected error. Please try again later.');
     }

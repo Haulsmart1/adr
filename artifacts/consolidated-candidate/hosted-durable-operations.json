@@ -1,0 +1,49 @@
+{
+  "base": "https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app",
+  "results": [
+    {
+      "check": "durable receipt",
+      "status": 200,
+      "reference": "MID-D9EFA042B0F24879BF641736CE65E146"
+    },
+    {
+      "check": "duplicate reference",
+      "pass": true
+    },
+    {
+      "check": "anonymous operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "ordinary operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "expired operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "forged operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "authorised operations detail and private download",
+      "pass": true
+    },
+    {
+      "check": "cross-enquiry document binding",
+      "pass": true
+    },
+    {
+      "check": "outbound notification disabled",
+      "pass": true
+    },
+    {
+      "check": "real database email rate limit",
+      "pass": true
+    }
+  ],
+  "emailsSent": 0,
+  "payments": 0,
+  "syntheticSignedSession": true
+}

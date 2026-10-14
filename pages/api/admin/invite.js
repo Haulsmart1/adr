@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { requireSuperAdmin } from '@/lib/server/requireSuperAdmin';
 
-const roles = new Set(['admin', 'super_admin', 'partner', 'forwarder', 'distributor', 'manufacturer', 'supplier']);
+const roles = new Set(['admin', 'partner', 'forwarder', 'distributor', 'manufacturer', 'supplier']);
 const accountTypes = new Set(['cash', 'credit', 'supplier']);
 
 export default async function handler(req, res) {

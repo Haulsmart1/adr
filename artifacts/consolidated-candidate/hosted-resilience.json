@@ -1,0 +1,20 @@
+{
+  "base": "https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app",
+  "results": [
+    {
+      "width": 390,
+      "lostResponseAfterDurableCommit": true,
+      "realBrowserTimeout": true,
+      "retrySameReference": true,
+      "oneStoredEnquiry": true,
+      "accountChangeClearsDraft": true,
+      "logoutDoesNotRestorePreviousCustomer": true
+    }
+  ],
+  "separateBrowserContextDraftIsolation": true,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "emailSubmissions": 0,
+  "payments": 0
+}

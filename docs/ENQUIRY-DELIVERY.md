@@ -1,5 +1,7 @@
 # Midnight enquiry delivery
 
+> Historical email-only candidate. The consolidated candidate supersedes this Redis/SMTP configuration with durable PostgreSQL capture. Use [CONSOLIDATED-CANDIDATE.md](CONSOLIDATED-CANDIDATE.md) for current configuration.
+
 The customer journey is service/contact/road quote → `/enquiry` → shipment brief →
 operations. Road, air, sea and advice requests share the same optional cargo and
 DG fields. No price, booking or DG acceptance is promised. The approved homepage

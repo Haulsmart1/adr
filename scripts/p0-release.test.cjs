@@ -51,12 +51,12 @@ test('wizard and multipart notification payloads retain consignment and quote co
  assert.deepEqual(bookingAlertPayload(wizard),wizard);
  assert.throws(()=>bookingAlertPayload({from:'',to:'B',quote:NaN}));
 });
-test('JSON booking request reaches the mail boundary with mocked delivery only',async()=>{
+test('legacy booking mail stays disabled even when old SMTP credentials are configured',async()=>{
  let message;
  const handler=(await load('pages/api/sendBookingAlerts.js',{'midnight-nodemailer':{default:{createTransport:()=>({sendMail:async value=>{message=value;}})}},'formidable':{default:{}},'@/lib/releaseBooking.cjs':require('../lib/releaseBooking.cjs')},{NODEMAILER_SMTP_HOST:'smtp.example.invalid',NODEMAILER_USER:'operator@example.invalid',NODEMAILER_PASS:'offline-only'})).default;
  const body=Buffer.from(JSON.stringify({from:'L1 1AA',to:'BT1 1AA',quote:125,breakdown:{vehicle:'Van'}}));
  const req={method:'POST',headers:{'content-type':'application/json'},async *[Symbol.asyncIterator](){yield body;}};
- const res=response();await handler(req,res);assert.equal(res.statusCode,200);assert(message.text.includes('L1 1AA'));assert.equal(message.from,'"Midnight Express Booking" <operator@example.invalid>');assert.equal(message.attachments.length,0);
+ const res=response();await handler(req,res);assert.equal(res.statusCode,410);assert.equal(message,undefined);assert(res.body.error.includes('No message was sent'));
 });
 test('recovered complete public post data preserves every grouped production record',()=>{
  const posts=require('../data/recovered-production-blog.json');

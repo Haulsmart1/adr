@@ -1,0 +1,78 @@
+{
+  "milestone": "Private consolidated candidate verified; separate production promotion requires owner decision",
+  "branch": "preview/midnight-consolidated-release",
+  "commit": "da43ab5626060af5bba1aa7585276d4a7c45fc50",
+  "sourceACheckpoint": "acbd078fac12437545e776b57d16582358517ae5",
+  "sourceB": "d7abb0ecbbfff6dc97a7df31226fc7d7b39a036b",
+  "homepageApproval": "7bca27f; HOMEPAGE-PREVIEW.md; homepage/map/shared layout unchanged",
+  "url": "https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app",
+  "deploymentId": "dpl_9xFBmrZmhVAav8Jam2XmYcjyD6iX",
+  "vercelProject": "prj_ssFhW39cgBpDO7aZsP5ifUnj0iJw",
+  "state": "READY",
+  "target": "preview",
+  "protected": true,
+  "checks": {
+    "applicationTests": 99,
+    "realPostgresIntegrationTests": 1,
+    "squareBoundaryTests": 21,
+    "typescript": "both passed",
+    "lint": "passed",
+    "staticBuildPages": 163,
+    "dependencyVulnerabilities": 0,
+    "road": "pass",
+    "air": "pass",
+    "sea": "pass",
+    "dg": "pass",
+    "draftRecovery": "pass",
+    "separateBrowserSessionIsolation": "pass",
+    "accountChangeDraftClearing": "pass",
+    "durableCapture": "pass",
+    "lostResponseThenSameReferenceRetry": "pass",
+    "databaseRestartPreservation": "pass",
+    "attachments": "pass",
+    "operationsAccess": "pass with synthetic signed preview administrator; anonymous/ordinary/expired/forged sessions rejected",
+    "routes": 23,
+    "articles": 2352,
+    "articleHttp200": 2352,
+    "publicBrowserPageViewports": 36,
+    "operationsPageViewports": 6,
+    "homepageViewports": 2,
+    "automatedAccessibilityViolations": 0,
+    "manualOperationsContrast": "fixed and screenshots reviewed",
+    "homepageImageContrast": "manual review; automated incomplete checks retained in evidence",
+    "enquiryRuntimeErrors": 0,
+    "enquiryConsoleErrors": 0
+  },
+  "email": {
+    "enabled": false,
+    "providerAcceptance": "configuration pending; success/failure branches tested with fixtures"
+  },
+  "square": {
+    "enabled": false,
+    "sandbox": "configuration pending"
+  },
+  "production": {
+    "changed": true,
+    "changedByThisSession": false,
+    "previousDeployment": "dpl_HEwd5hHJQem5LjDCho3CWh485UKF",
+    "currentDeployment": "dpl_FbeSPSVbBMFTa3EyN9hbYrjBKB6s",
+    "currentCommit": "da43ab5626060af5bba1aa7585276d4a7c45fc50",
+    "source": "redeploy",
+    "action": "promote",
+    "promotionTime": "2026-10-14T05:49:59.762Z",
+    "aliasesReassignedBySeparatePromotion": 7,
+    "adrMain": "0e43bcc17eeb6e02e99b352d20c1e17e76a0f5ee",
+    "ownerDecisionRequired": true
+  },
+  "externalGates": [
+    "Confirm whether the separate production promotion was intentional; authorise recovery if not",
+    "Email credentials and controlled provider acceptance test",
+    "Square Sandbox configuration; live billing remains reserved",
+    "Final legal/commercial approval and public production promotion"
+  ],
+  "notes": [
+    "Synthetic data only in isolated preview database. IP rate buckets reset between acceptance runs, after real rate-limit verification; application limits unchanged.",
+    "File validation is not malware certification. Downloads remain authenticated attachments.",
+    "Hosted evidence is checkpointed locally after verification; the published release branch remains at the deployed commit."
+  ]
+}

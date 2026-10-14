@@ -100,33 +100,9 @@ export default function BookingForm({ currentStep, onNext, onBack, onSubmit }) {
     autoCalculate();
   }, [consignments]);
 
-  const handleFinalSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-
-    for (const c of consignments) {
-      if (!c.invoiceFile || !c.packingListFile || c.hasForkliftPickup === null || c.hasForkliftDelivery === null || c.pallets.length > 4) {
-        setSubmitting(false);
-        return;
-      }
-    }
-
-    const formData = new FormData();
-    formData.append('bookingData', JSON.stringify({ consignments, totalQuote: quote }));
-
-    consignments.forEach((c, i) => {
-      if (c.invoiceFile) formData.append(`invoiceFile_${i}`, c.invoiceFile);
-      if (c.packingListFile) formData.append(`packingListFile_${i}`, c.packingListFile);
-      if (c.adr && c.dgnFile) formData.append(`dgnFile_${i}`, c.dgnFile);
-    });
-
-    await fetch('/api/sendBookingAlerts', {
-      method: 'POST',
-      body: formData,
-    });
-
-    if (onSubmit) onSubmit({ consignments, totalQuote: quote });
-    setSubmitting(false);
+  const handleFinalSubmit = (event) => {
+    event.preventDefault();
+    window.location.assign('/enquiry?mode=Road');
   };
 
   return (
@@ -142,7 +118,7 @@ export default function BookingForm({ currentStep, onNext, onBack, onSubmit }) {
 
       <div className={styles.actions}>
         <button type="button" onClick={onBack}>⬅ Back</button>
-        <button type="submit" disabled={submitting}>✅ Submit</button>
+        <button type="submit" disabled={submitting}>Continue to freight enquiry</button>
       </div>
     </form>
   );

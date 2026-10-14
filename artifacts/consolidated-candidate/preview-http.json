@@ -1,83 +1,83 @@
 {
-  "base": "http://127.0.0.1:3033",
+  "base": "https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app",
   "results": [
     {
       "path": "/",
       "status": 200,
-      "durationMs": 65,
-      "htmlBytes": 21169
+      "durationMs": 883,
+      "htmlBytes": 21687
     },
     {
       "path": "/road-freight",
       "status": 200,
-      "durationMs": 6,
-      "htmlBytes": 12067
+      "durationMs": 168,
+      "htmlBytes": 12622
     },
     {
       "path": "/air-freight",
       "status": 200,
-      "durationMs": 18,
-      "htmlBytes": 12214
+      "durationMs": 220,
+      "htmlBytes": 12769
     },
     {
       "path": "/sea-freight",
       "status": 200,
-      "durationMs": 16,
-      "htmlBytes": 12205
+      "durationMs": 147,
+      "htmlBytes": 12760
     },
     {
       "path": "/contact",
       "status": 200,
-      "durationMs": 15,
-      "htmlBytes": 3645
+      "durationMs": 159,
+      "htmlBytes": 4052
     },
     {
       "path": "/booking",
       "status": 200,
-      "durationMs": 16,
-      "htmlBytes": 3298
+      "durationMs": 295,
+      "htmlBytes": 3816
     },
     {
       "path": "/enquiry",
       "status": 200,
-      "durationMs": 18,
-      "htmlBytes": 13987
+      "durationMs": 597,
+      "htmlBytes": 14468
     },
     {
       "path": "/about",
       "status": 200,
-      "durationMs": 19,
-      "htmlBytes": 8523
+      "durationMs": 140,
+      "htmlBytes": 9004
     },
     {
       "path": "/company-information",
       "status": 200,
-      "durationMs": 9,
-      "htmlBytes": 8261
+      "durationMs": 155,
+      "htmlBytes": 8742
     },
     {
       "path": "/privacy",
       "status": 200,
-      "durationMs": 16,
-      "htmlBytes": 8761
+      "durationMs": 152,
+      "htmlBytes": 9242
     },
     {
       "path": "/european-freight",
       "status": 200,
-      "durationMs": 17,
-      "htmlBytes": 13979
+      "durationMs": 211,
+      "htmlBytes": 14534
     },
     {
       "path": "/time-critical-freight",
       "status": 200,
-      "durationMs": 12,
-      "htmlBytes": 12253
+      "durationMs": 170,
+      "htmlBytes": 12808
     },
     {
       "path": "/freight-resources",
       "status": 200,
-      "durationMs": 16,
-      "htmlBytes": 199574
+      "durationMs": 169,
+      "htmlBytes": 200092
     }
   ],
   "routes": [

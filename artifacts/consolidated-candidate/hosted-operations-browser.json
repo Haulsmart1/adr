@@ -1,0 +1,76 @@
+{
+  "base": "https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app",
+  "results": [
+    {
+      "page": "/operations/enquiries",
+      "width": 1440,
+      "h1": 1,
+      "title": "Enquiries | Midnight Operations",
+      "descriptions": 1,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "forms": 0,
+      "axe": []
+    },
+    {
+      "page": "/operations/enquiries/MID-D9EFA042B0F24879BF641736CE65E146",
+      "width": 1440,
+      "h1": 1,
+      "title": "Stored enquiry | Midnight Operations",
+      "descriptions": 1,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "forms": 0,
+      "axe": []
+    },
+    {
+      "page": "/operations/enquiries",
+      "width": 768,
+      "h1": 1,
+      "title": "Enquiries | Midnight Operations",
+      "descriptions": 1,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "forms": 0,
+      "axe": []
+    },
+    {
+      "page": "/operations/enquiries/MID-D9EFA042B0F24879BF641736CE65E146",
+      "width": 768,
+      "h1": 1,
+      "title": "Stored enquiry | Midnight Operations",
+      "descriptions": 1,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "forms": 0,
+      "axe": []
+    },
+    {
+      "page": "/operations/enquiries",
+      "width": 390,
+      "h1": 1,
+      "title": "Enquiries | Midnight Operations",
+      "descriptions": 1,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "forms": 0,
+      "axe": []
+    },
+    {
+      "page": "/operations/enquiries/MID-D9EFA042B0F24879BF641736CE65E146",
+      "width": 390,
+      "h1": 1,
+      "title": "Stored enquiry | Midnight Operations",
+      "descriptions": 1,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "forms": 0,
+      "axe": []
+    }
+  ],
+  "errors": [],
+  "blocked": [],
+  "quoteResponses": [],
+  "emailsSent": 0,
+  "payments": 0
+}

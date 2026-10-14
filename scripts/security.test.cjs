@@ -162,8 +162,10 @@ test('quote writes require owner verification before route calculation', async (
 });
 test('auth config uses independent login clients and no plaintext password lookup', async () => {
   let clients = 0;
-  const user = { id: 'owner', email: 'demo@example.invalid' };
+  const user = { id: 'owner', email: 'demo@example.invalid', email_confirmed_at: '2026-01-01T00:00:00Z' };
   const config = (await load('lib/server/authConfig.js', {
+    './adminAuthority.cjs': { hasAuthority: async () => false, projectConfig: () => { throw Error('Not configured'); } },
+    './enquiryRepository.cjs': { getPool: () => null },
     'next-auth/providers/credentials': { default: (options) => options },
     '@supabase/supabase-js': { createClient: () => {
       clients += 1;
@@ -181,17 +183,55 @@ test('auth config uses independent login clients and no plaintext password looku
   assert.equal(config.secret, undefined);
 });
 
-test('admin notification SMTP credentials come from environment rather than embedded literals', async () => {
-  let transportOptions;
-  const handler = (await load('pages/api/send-new-admin-email.js', {
-    'midnight-nodemailer': { default: { createTransport: (options) => {
-      transportOptions = options;
-      return { sendMail: async () => ({}) };
-    } } },
-  }, { EMAIL_USER: 'local@example.invalid', EMAIL_PASS: 'dummy-not-a-credential' })).default;
+test('retired admin email cannot transmit passwords or send uncontrolled email', async () => {
+  const handler = (await load('pages/api/send-new-admin-email.js')).default;
   const res = response();
   await handler({ body: JSON.stringify({ name: 'Demo', email: 'recipient@example.invalid', password: 'dummy' }) }, res);
-  assert.equal(res.code, 200);
-  assert.equal(transportOptions.auth.user, 'local@example.invalid');
-  assert.equal(transportOptions.auth.pass, 'dummy-not-a-credential');
+  assert.equal(res.code, 410);
+  assert.equal(JSON.stringify(res.body).includes('dummy'), false);
+});
+
+test('historical account-creation URLs use the protected provider-only setup page',()=>{
+  for(const relative of ['admin/admins/create.js','super/admins/create.js','admin/users/create.js']) {
+    const source=fs.readFileSync(path.join(__dirname,'../pages/dashboard',relative),'utf8');
+    assert(source.includes("export { default, getServerSideProps } from '@/pages/dashboard/admin/add-admin'"));
+    assert(!/bcrypt|rawPassword|\.insert\(/.test(source));
+  }
+});
+
+test('dedicated provider login grants only authoritative verified admin; session rechecks fail closed', async () => {
+  let verified=true, granted=true, available=true;
+  const user=()=>({id:'provider-user',email:'stuart@adrcarriers.net',email_confirmed_at:verified?'2026-01-01T00:00:00Z':null,user_metadata:{role:'super_admin'}});
+  const config=(await load('lib/server/authConfig.js',{
+    'next-auth/providers/credentials':{default:options=>options},
+    '@supabase/supabase-js':{createClient:()=>({auth:{
+      signInWithPassword:async()=>({data:{user:user(),session:{access_token:access,refresh_token:'synthetic-refresh'}}}),
+      getUser:async()=>{if(!available)throw Error('private provider detail');return {data:{user:user()}};},
+    }})},
+    './sessionPolicy.cjs':{sessionIsCurrent},
+    './adminAuthority.cjs':{projectConfig:()=>({url:'https://dedicated.example.invalid'}),hasAuthority:async identity=>Boolean(granted&&identity.email_confirmed_at)},
+    './enquiryRepository.cjs':{getPool:()=>({})},
+  },{MIDNIGHT_AUTH_PROJECT_REF:'synthetic'})).authOptions;
+  const login=()=>config.providers[0].authorize({email:'stuart@adrcarriers.net',password:'synthetic-test-only'});
+  verified=false;assert.equal(await login(),null);
+  verified=true;granted=false;assert.equal((await login()).role,'customer');
+  granted=true;const admin=await login();assert.equal(admin.role,'super_admin');
+  const token=await config.callbacks.jwt({token:{},user:admin});assert.equal(token.role,'super_admin');
+  granted=false;assert.equal((await config.callbacks.jwt({token})).role,'user');
+  granted=true;available=false;const unavailable=await config.callbacks.jwt({token:{},user:admin});assert.equal(unavailable.role,'user');assert.equal(unavailable.error,'ReauthenticationRequired');
+});
+
+test('operations status API enforces origin, server role, validation and concurrent-update conflict',async()=>{
+  let allowed=false,calls=0,conflict=false;
+  const handler=(await load('pages/api/operations/enquiries/[reference]/status.js',{
+    '@/lib/server/requireSuperAdmin':{requireSuperAdmin:async(req,res)=>{if(allowed)return {user:{id:'operator'}};res.status(403).json({message:'Denied'});return null;}},
+    '@/lib/server/enquiryCapture.cjs':{sameOrigin:req=>req.headers.origin==='https://preview.example.invalid'},
+    '@/lib/server/enquiryRepository.cjs':{repository:()=>({changeStatus:async(ref,expected,status,actor)=>{calls++;assert.equal(actor,'operator');return conflict?{conflict:true}:{status};}})},
+  })).default;
+  const req={method:'POST',headers:{origin:'https://preview.example.invalid'},query:{reference:'MID-'+'A'.repeat(32)},body:{status:'reviewing',expected:'new',role:'super_admin',actor:'attacker'}};
+  let res=response();await handler(req,res);assert.equal(res.code,403);assert.equal(calls,0);
+  allowed=true;res=response();await handler({...req,headers:{origin:'https://evil.invalid'}},res);assert.equal(res.code,403);assert.equal(calls,0);
+  res=response();await handler({...req,body:{status:'automatically-accepted',expected:'new'}},res);assert.equal(res.code,400);
+  res=response();await handler(req,res);assert.equal(res.code,200);
+  conflict=true;res=response();await handler(req,res);assert.equal(res.code,409);
 });

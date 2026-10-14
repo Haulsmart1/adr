@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-14",
+  "tests": 105,
+  "databaseIntegration": "PASS",
+  "migrationAndAuthorityIntegration": "PASS",
+  "typescript": [
+    "root PASS",
+    "application PASS"
+  ],
+  "lint": "PASS",
+  "build": {
+    "result": "PASS",
+    "staticPages": 156,
+    "note": "Protected account setup routes changed from static pages to server-authorized routes; no route deletion."
+  },
+  "auditVulnerabilities": 0,
+  "authProvider": "Dedicated configuration pending",
+  "realStuartLogin": "NOT VERIFIED",
+  "applicationAdminGrants": 0,
+  "email": "DISABLED",
+  "square": "DISABLED",
+  "production": "Retain current promotion; no production actions issued"
+}

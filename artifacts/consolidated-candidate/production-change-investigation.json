@@ -1,0 +1,50 @@
+{
+  "finding": "A separate API promotion changed production during hosted preview verification. No promotion was issued by this session.",
+  "previousProduction": "dpl_HEwd5hHJQem5LjDCho3CWh485UKF",
+  "currentProduction": "dpl_FbeSPSVbBMFTa3EyN9hbYrjBKB6s",
+  "productionCommit": "da43ab5626060af5bba1aa7585276d4a7c45fc50",
+  "promotionUsedDifferentTokenThanPreviewCLI": true,
+  "events": [
+    {
+      "time": "2026-10-14T05:51:36.108Z",
+      "type": "aliases-assigned",
+      "deployment": "dpl_FbeSPSVbBMFTa3EyN9hbYrjBKB6s",
+      "action": "promote",
+      "originalDeployment": "dpl_9xFBmrZmhVAav8Jam2XmYcjyD6iX",
+      "via": [],
+      "actor": "codex"
+    },
+    {
+      "time": "2026-10-14T05:50:00.105Z",
+      "type": "deployment",
+      "deployment": "dpl_FbeSPSVbBMFTa3EyN9hbYrjBKB6s",
+      "target": "production",
+      "action": "promote",
+      "originalDeployment": "dpl_9xFBmrZmhVAav8Jam2XmYcjyD6iX",
+      "via": [],
+      "actor": "codex"
+    },
+    {
+      "time": "2026-10-14T05:47:17.279Z",
+      "type": "deployment",
+      "deployment": "dpl_9xFBmrZmhVAav8Jam2XmYcjyD6iX",
+      "target": null,
+      "via": [
+        "Vercel CLI"
+      ],
+      "actor": "codex"
+    },
+    {
+      "time": "2026-10-14T05:40:56.789Z",
+      "type": "deployment",
+      "deployment": "dpl_DkKk4W9WsAsNjyTcWeFaD1p2vPys",
+      "target": null,
+      "via": [
+        "Vercel CLI"
+      ],
+      "actor": "codex"
+    }
+  ],
+  "preparedRecoveryCommand": "vercel rollback dpl_HEwd5hHJQem5LjDCho3CWh485UKF --scope haulsmart --yes --non-interactive",
+  "recoveryExecuted": false
+}

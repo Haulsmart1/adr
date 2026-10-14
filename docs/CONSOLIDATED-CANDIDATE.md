@@ -40,3 +40,19 @@ Future authorised email configuration additionally needs `MIDNIGHT_ENQUIRY_SMTP_
 Current exact-candidate evidence is recorded under `artifacts/consolidated-candidate`. Full application/Square tests, a real dedicated-database integration test, types, changed-source lint, build, dependency audit, secret checks, hosted browser and full article crawl form the release gate. Evidence from the older demo is retained as provenance, not substituted for consolidated acceptance.
 
 Production promotion, live payments and outbound production email are not authorised by this candidate. Final commercial/legal review must confirm the privacy notice, retention schedule, provider arrangements and shipment terms before public launch. Real operations account access follows existing account administration; synthetic signed sessions used in preview verification do not establish a production account.
+
+## Verified hosted milestone
+
+Release branch `preview/midnight-consolidated-release`, commit `da43ab5626060af5bba1aa7585276d4a7c45fc50`, deployment `dpl_9xFBmrZmhVAav8Jam2XmYcjyD6iX`: https://midex-clean-midex-8xnq6rrzj-haulsmart.vercel.app . Vercel Authentication remains enabled.
+
+Hosted acceptance: six Road/Air/Sea desktop/mobile flows; 36 public page/viewports; six authenticated operations page/viewports; desktop/mobile homepage screenshots and keyboard checks; all 23 retained routes; all 2,352 articles HTTP 200 with retained canonicals and sitemap entries. Durable capture, private attachments, role/expiry/IDOR controls, real browser timeout after commit, same-reference retry and account-change draft clearing pass. A dedicated database restart preserved all 19 records present at that test point.
+
+The final local build generated 163 pages; 99 application tests plus the real PostgreSQL integration test pass; both TypeScript checks and lint pass; dependency audit has zero findings; known secret values have no source/client matches. The operations-page inherited background contrast was corrected and manually rechecked. Automated accessibility scans report zero violations; image-backed homepage contrast incomplete results remain explicitly recorded, not treated as certification.
+
+Email and Square remain disabled. Provider configuration and final legal/commercial approval remain external gates. ADR main is unchanged. Final production comparison detected a separate API promotion at 05:49:59 UTC, using a different token from the preview CLI. It created production deployment `dpl_FbeSPSVbBMFTa3EyN9hbYrjBKB6s` from the verified preview and reassigned seven live aliases. This session issued no promotion. The previous production was `dpl_HEwd5hHJQem5LjDCho3CWh485UKF`. Owner confirmation is needed before reversing a separate live deployment; see `artifacts/consolidated-candidate/production-change-investigation.json`. Post-deployment evidence is preserved locally without moving the published branch away from its deployed commit.
+
+## Hospital-mode continuation
+
+Stuart has explicitly resolved the separate production promotion: retain current production. No rollback, promotion, alias or DNS change is authorised during this mission. The earlier confirmation request is closed.
+
+Dedicated Midnight persistence already exists and has been retained. Versioned migrations now also prepare immutable initial administrator authority and audited operations workflow/search. Dedicated Auth provisioning and Stuart mailbox verification remain external gates; no real account grant is claimed. See `docs/MIDNIGHT-ADMIN-BOOTSTRAP.md`.
