@@ -1,4 +1,4 @@
-.container { max-width: 900px; margin: 0 auto; padding: 48px 24px; color: #142b40; }
+.container { max-width: 900px; margin: 0 auto; padding: 48px 24px; color: #142b40; background: #fff; }
 .container h1 { font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.1; overflow-wrap: anywhere; }
 .container h2 { margin-top: 32px; }
 .container p { line-height: 1.65; }
