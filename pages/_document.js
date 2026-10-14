@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
     const page = this.props.__NEXT_DATA__.page;
-    const marketing = ["/", "/road-freight", "/air-freight", "/sea-freight", "/time-critical-freight", "/european-freight", "/freight-resources", "/about", "/company-information", "/contact", "/booking", "/register", "/enquiry"].includes(page) && !this.props.__NEXT_DATA__.props.pageProps.preserveSharedHomepage;
+    const marketing = ["/", "/road-freight", "/air-freight", "/sea-freight", "/time-critical-freight", "/european-freight", "/freight-resources", "/about", "/company-information", "/contact", "/booking", "/register", "/enquiry", "/privacy"].includes(page) && !this.props.__NEXT_DATA__.props.pageProps.preserveSharedHomepage;
     return (
       <Html lang="en">
         <Head>

@@ -20,7 +20,7 @@ export default function CompanyInformation() {
       <p>This website does not currently collect online payments. Arrange invoice and payment requirements directly with operations. Opening an email link does not send a message; send your enquiry from your email app or call the team.</p>
       <h2>Questions or a service concern</h2>
       <p>Contact operations with your shipment or invoice reference and a description of the issue so the team can review it.</p>
-      <p><Link href="/contact">Contact operations</Link> · <Link href="/booking">Prepare a road freight enquiry</Link></p>
+      <p><Link href="/contact">Contact operations</Link> · <Link href="/enquiry">Prepare a freight enquiry</Link> · <Link href="/privacy">Privacy and cookies</Link></p>
     </div></section>
   </FreightLayout>;
 }

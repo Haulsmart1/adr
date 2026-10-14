@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /dashboard/
+Disallow: /operations/
 Disallow: /api/
 Allow: /api/sitemap
 

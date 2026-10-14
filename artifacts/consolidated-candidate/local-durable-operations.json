@@ -1,0 +1,49 @@
+{
+  "base": "http://127.0.0.1:3033",
+  "results": [
+    {
+      "check": "durable receipt",
+      "status": 200,
+      "reference": "MID-18762E7808FF450AAB1ED562DADBE115"
+    },
+    {
+      "check": "duplicate reference",
+      "pass": true
+    },
+    {
+      "check": "anonymous operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "ordinary operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "expired operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "forged operations access rejected",
+      "pass": true
+    },
+    {
+      "check": "authorised operations detail and private download",
+      "pass": true
+    },
+    {
+      "check": "cross-enquiry document binding",
+      "pass": true
+    },
+    {
+      "check": "outbound notification disabled",
+      "pass": true
+    },
+    {
+      "check": "real database email rate limit",
+      "pass": true
+    }
+  ],
+  "emailsSent": 0,
+  "payments": 0,
+  "syntheticSignedSession": true
+}

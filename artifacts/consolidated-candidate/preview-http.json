@@ -1,0 +1,190 @@
+{
+  "base": "http://127.0.0.1:3033",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "durationMs": 65,
+      "htmlBytes": 21169
+    },
+    {
+      "path": "/road-freight",
+      "status": 200,
+      "durationMs": 6,
+      "htmlBytes": 12067
+    },
+    {
+      "path": "/air-freight",
+      "status": 200,
+      "durationMs": 18,
+      "htmlBytes": 12214
+    },
+    {
+      "path": "/sea-freight",
+      "status": 200,
+      "durationMs": 16,
+      "htmlBytes": 12205
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "durationMs": 15,
+      "htmlBytes": 3645
+    },
+    {
+      "path": "/booking",
+      "status": 200,
+      "durationMs": 16,
+      "htmlBytes": 3298
+    },
+    {
+      "path": "/enquiry",
+      "status": 200,
+      "durationMs": 18,
+      "htmlBytes": 13987
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "durationMs": 19,
+      "htmlBytes": 8523
+    },
+    {
+      "path": "/company-information",
+      "status": 200,
+      "durationMs": 9,
+      "htmlBytes": 8261
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "durationMs": 16,
+      "htmlBytes": 8761
+    },
+    {
+      "path": "/european-freight",
+      "status": 200,
+      "durationMs": 17,
+      "htmlBytes": 13979
+    },
+    {
+      "path": "/time-critical-freight",
+      "status": 200,
+      "durationMs": 12,
+      "htmlBytes": 12253
+    },
+    {
+      "path": "/freight-resources",
+      "status": 200,
+      "durationMs": 16,
+      "htmlBytes": 199574
+    }
+  ],
+  "routes": [
+    {
+      "path": "/auth/redirect",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-10",
+      "status": 200
+    },
+    {
+      "path": "/blog",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-1",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-3",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-2",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-4",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-5",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-9",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-8",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-6",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-7",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/admin/super/users/invite",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/admin/super/default",
+      "status": 200
+    },
+    {
+      "path": "/blog/routes/group-1",
+      "status": 200
+    },
+    {
+      "path": "/blog/oxford-to-helsinki",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/currys/admin/users",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/currys/bookings/all/bookings",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/partner/fastfreight",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/default",
+      "status": 307
+    },
+    {
+      "path": "/thank-you",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/partner/fastfreight/vehicles",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/partner/fastfreight/archive",
+      "status": 307
+    }
+  ],
+  "articleUrlsInSitemap": 2352,
+  "boundaries": [
+    {
+      "path": "/api/payments/square/webhook",
+      "status": 503
+    },
+    {
+      "path": "/api/create-checkout-session",
+      "status": 503
+    }
+  ],
+  "emailsSent": 0,
+  "payments": 0
+}

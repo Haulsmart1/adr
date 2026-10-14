@@ -1,0 +1,192 @@
+{
+  "base": "https://midex-clean-midex-e50n3i9j3-haulsmart.vercel.app",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "durationMs": 901,
+      "htmlBytes": 21687
+    },
+    {
+      "path": "/road-freight",
+      "status": 200,
+      "durationMs": 268,
+      "htmlBytes": 12622
+    },
+    {
+      "path": "/air-freight",
+      "status": 200,
+      "durationMs": 150,
+      "htmlBytes": 12769
+    },
+    {
+      "path": "/sea-freight",
+      "status": 200,
+      "durationMs": 265,
+      "htmlBytes": 12760
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "durationMs": 179,
+      "htmlBytes": 4052
+    },
+    {
+      "path": "/booking",
+      "status": 200,
+      "durationMs": 424,
+      "htmlBytes": 3816
+    },
+    {
+      "path": "/enquiry",
+      "status": 200,
+      "durationMs": 164,
+      "htmlBytes": 13997
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "durationMs": 308,
+      "htmlBytes": 9004
+    },
+    {
+      "path": "/company-information",
+      "status": 200,
+      "durationMs": 185,
+      "htmlBytes": 8701
+    },
+    {
+      "path": "/european-freight",
+      "status": 200,
+      "durationMs": 165,
+      "htmlBytes": 14534
+    },
+    {
+      "path": "/time-critical-freight",
+      "status": 200,
+      "durationMs": 148,
+      "htmlBytes": 12808
+    },
+    {
+      "path": "/freight-resources",
+      "status": 200,
+      "durationMs": 220,
+      "htmlBytes": 200092
+    }
+  ],
+  "routes": [
+    {
+      "path": "/auth/redirect",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-10",
+      "status": 200
+    },
+    {
+      "path": "/blog",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-1",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-3",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-2",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-4",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-5",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-9",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-8",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-6",
+      "status": 200
+    },
+    {
+      "path": "/blog/group-7",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/admin/super/users/invite",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/admin/super/default",
+      "status": 200
+    },
+    {
+      "path": "/blog/routes/group-1",
+      "status": 200
+    },
+    {
+      "path": "/blog/oxford-to-helsinki",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/currys/admin/users",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/currys/bookings/all/bookings",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/partner/fastfreight",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/default",
+      "status": 307
+    },
+    {
+      "path": "/thank-you",
+      "status": 200
+    },
+    {
+      "path": "/dashboard/partner/fastfreight/vehicles",
+      "status": 307
+    },
+    {
+      "path": "/dashboard/partner/fastfreight/archive",
+      "status": 307
+    }
+  ],
+  "articleUrlsInSitemap": 2352,
+  "boundaries": [
+    {
+      "path": "/api/payments/square/webhook",
+      "status": 503
+    },
+    {
+      "path": "/api/create-checkout-session",
+      "status": 503
+    },
+    {
+      "path": "/api/enquiry",
+      "status": 503
+    },
+    {
+      "path": "/api/contact",
+      "status": 503
+    }
+  ],
+  "emailsSent": 0,
+  "payments": 0
+}

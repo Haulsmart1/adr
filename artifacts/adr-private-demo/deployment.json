@@ -1,0 +1,71 @@
+{
+  "milestone": "MIDNIGHT ROAD/AIR/SEA PRIVATE DEMO ? LIVE AND VERIFIED",
+  "date": "2026-10-14",
+  "url": "https://midex-clean-midex-e50n3i9j3-haulsmart.vercel.app",
+  "deploymentId": "dpl_23by5jSerxR6wFXg6ewUycZ9jsLu",
+  "project": "haulsmart/midex-clean-midex",
+  "repository": "Haulsmart1/adr",
+  "branch": "preview/midnight-road-air-sea-enquiries",
+  "commit": "d7abb0ecbbfff6dc97a7df31226fc7d7b39a036b",
+  "state": "READY",
+  "target": "preview",
+  "protection": "Vercel Authentication retained",
+  "buildDurationMs": 61831,
+  "source": {
+    "freshClone": true,
+    "workingTreeClean": true,
+    "treeMatchesVerifiedCandidate": true
+  },
+  "hosted": {
+    "publicPages": 12,
+    "historicalRoutePatterns": 23,
+    "articleUrlsHttp200": 2352,
+    "articleFailures": 0,
+    "commercialPageViewports": 22,
+    "homepageViewports": 2,
+    "enquiryFlows": 6,
+    "modes": [
+      "Road",
+      "Air",
+      "Sea"
+    ],
+    "widths": [
+      1440,
+      390
+    ],
+    "requiredValidation": true,
+    "emailValidation": true,
+    "dangerousGoodsConditional": true,
+    "draftRefreshRecovery": true,
+    "draftNavigationRecovery": true,
+    "separateBrowserContextDraftIsolation": true,
+    "runtimeErrors": 0,
+    "consoleErrorsInEnquiryFlows": 0,
+    "automatedAccessibilityViolations": 0,
+    "overflow": false,
+    "homepageContrastIncomplete": [
+      12,
+      11
+    ]
+  },
+  "boundaries": {
+    "emailEnabled": false,
+    "squareEnabled": false,
+    "emailsSent": 0,
+    "charges": 0,
+    "productionPromotions": 0,
+    "dnsChanges": 0,
+    "mainUnchanged": "0e43bcc17eeb6e02e99b352d20c1e17e76a0f5ee",
+    "productionUnchanged": "696047c3c9db2958f42e8d1e606ba6c55af009d3"
+  },
+  "externalGates": [
+    "Dedicated SMTP/Redis configuration and controlled delivery verification",
+    "Square Sandbox application and isolated payment database verification",
+    "Final legal/commercial approval and separate production promotion"
+  ],
+  "notes": [
+    "Automated accessibility checks are not a complete accessibility certification; image-backed contrast includes incomplete results.",
+    "The browser demo prepares an email-app brief and truthfully states that no enquiry has been sent.",
+    "No source changes were needed. Browser-context harness error was corrected before final passing test."
+  ]
+}
