@@ -221,6 +221,52 @@ test('dedicated provider login grants only authoritative verified admin; session
   granted=true;available=false;const unavailable=await config.callbacks.jwt({token:{},user:admin});assert.equal(unavailable.role,'user');assert.equal(unavailable.error,'ReauthenticationRequired');
 });
 
+test('session serialization never exposes current or legacy refresh credentials', async () => {
+  const config=(await load('lib/server/authConfig.js',{
+    'next-auth/providers/credentials':{default:options=>options},
+    '@supabase/supabase-js':{createClient:()=>{throw Error('No provider call expected');}},
+    './sessionPolicy.cjs':{sessionIsCurrent},
+    './adminAuthority.cjs':{projectConfig(){},hasAuthority(){}},
+    './enquiryRepository.cjs':{getPool(){throw Error('No database call expected');}},
+  })).authOptions;
+  const secret='synthetic-refresh-must-remain-private';
+  const token=await config.callbacks.jwt({token:{supabaseRefreshToken:secret},user:{id:'owner',role:'customer',access_token:access,refresh_token:secret}});
+  assert.equal(token.supabaseRefreshToken,undefined);
+  const legacy=await config.callbacks.jwt({token:{id:'owner',role:'customer',supabaseAccessToken:access,supabaseRefreshToken:secret}});
+  assert.equal(legacy.supabaseRefreshToken,undefined);
+  const session=await config.callbacks.session({session:{},token:{...legacy,supabaseRefreshToken:secret}});
+  assert.equal(session.user.supabaseAccessToken,access);
+  assert.equal(session.user.supabaseRefreshToken,undefined);
+  assert(!JSON.stringify(session).includes(secret));
+  assert.equal(sessionIsCurrent(session),true);
+});
+
+test('enquiry attachment route rejects tenant roles before repository access and redacts backend errors',async()=>{
+  let session,unavailable=false,calls=0;
+  const guard=(await load('lib/server/requireSuperAdmin.js',{
+    'next-auth':{getServerSession:async()=>session},
+    '@/lib/authOptions':{authOptions:{}},
+    './sessionPolicy.cjs':{sessionIsCurrent},
+  })).requireSuperAdmin;
+  const handler=(await load('pages/api/operations/enquiries/[reference]/attachments/[id].js',{
+    '@/lib/server/requireSuperAdmin':{requireSuperAdmin:guard},
+    '@/lib/server/enquiryRepository.cjs':{repository:()=>({download:async(reference,id)=>{
+      calls++;assert.equal(reference,'MID-'+'A'.repeat(32));assert.equal(id,'12345678-1234-4234-8234-123456789abc');
+      if(unavailable)throw Error('postgresql://private-user:private-password@private-host/secret');
+      return null;
+    }})},
+  })).default;
+  const req={method:'GET',query:{reference:'MID-'+'A'.repeat(32),id:'12345678-1234-4234-8234-123456789abc',role:'super_admin'},body:{role:'super_admin'}};
+  for(const role of ['customer','admin','tenant_admin']){
+    session={user:{...validSession.user,role}};const res=response();await handler(req,res);assert.equal(res.code,403);assert.equal(calls,0);
+  }
+  session={user:{...validSession.user,role:'super_admin'}};
+  let res=response();res.end=()=>res;await handler(req,res);assert.equal(res.code,404);assert.equal(calls,1);
+  unavailable=true;res=response();await handler(req,res);assert.equal(res.code,503);
+  assert.equal(res.body.error,'Document temporarily unavailable');assert(!JSON.stringify(res.body).includes('private-'));
+  assert.equal(res.headers['Cache-Control'],'private, no-store');
+});
+
 test('operations status API enforces origin, server role, validation and concurrent-update conflict',async()=>{
   let allowed=false,calls=0,conflict=false;
   const handler=(await load('pages/api/operations/enquiries/[reference]/status.js',{
