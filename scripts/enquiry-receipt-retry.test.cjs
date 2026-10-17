@@ -2,12 +2,14 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
+const { createRequire } = require('node:module');
+const adapterRequire = createRequire(require.resolve('../lib/server/enquiryRepository.cjs'));
 
 // Load the real transaction adapter without connecting to any database.
 const adapter = { exports: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../lib/server/enquiryRepository.cjs'), 'utf8'), {
   module: adapter, process: { env: {} },
-  require(name) { return name === 'pg' ? { Pool: class {} } : require(name); },
+  require(name) { return name === 'pg' ? { Pool: class {} } : adapterRequire(name); },
 });
 
 function fixture() {
