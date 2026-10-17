@@ -2,6 +2,7 @@
   "name": "midex",
   "version": "1.0.0",
   "scripts": {
+    "test:database-config": "node --test scripts/enquiry-database-config.test.cjs",
     "test:receipt-retry": "node --test scripts/enquiry-receipt-retry.test.cjs",
     "test:local": "node --experimental-vm-modules --test scripts/freight.test.cjs scripts/security.test.cjs scripts/routing.test.cjs scripts/workspace.test.cjs scripts/release-dependencies.test.cjs scripts/p0-release.test.cjs scripts/square-boundary.test.cjs scripts/public-quote.test.cjs scripts/enquiry.test.cjs scripts/enquiry-capture.test.cjs scripts/admin-authority.test.cjs",
     "test:square": "node --experimental-vm-modules --test scripts/square-boundary.test.cjs",
