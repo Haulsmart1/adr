@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const {randomUUID}=require('node:crypto');
 const {createHandler,notify,configured}=require('../lib/server/enquiryCapture.cjs');
 const {attachments}=require('../lib/server/enquiryAttachments.cjs');
-const env={MIDNIGHT_ENQUIRY_ENABLED:'true',MIDNIGHT_ENQUIRY_DATABASE_URL:'postgresql://example.invalid/preview',MIDNIGHT_ENQUIRY_HASH_SECRET:'synthetic-test-value-'.repeat(3),MIDNIGHT_ENQUIRY_EMAIL_ENABLED:'true',MIDNIGHT_ENQUIRY_SMTP_HOST:'example.invalid',MIDNIGHT_ENQUIRY_SMTP_USER:'test',MIDNIGHT_ENQUIRY_SMTP_PASS:'test',MIDNIGHT_ENQUIRY_FROM:'sender@example.invalid',MIDNIGHT_ENQUIRY_TO:'ops@example.invalid'};
+const env={MIDNIGHT_ENQUIRY_ENABLED:'true',MIDNIGHT_ENQUIRY_DATABASE_URL:'postgresql://example.invalid/midnight_enquiries',MIDNIGHT_ENQUIRY_HASH_SECRET:'synthetic-test-value-'.repeat(3),MIDNIGHT_ENQUIRY_EMAIL_ENABLED:'true',MIDNIGHT_ENQUIRY_SMTP_HOST:'example.invalid',MIDNIGHT_ENQUIRY_SMTP_USER:'test',MIDNIGHT_ENQUIRY_SMTP_PASS:'test',MIDNIGHT_ENQUIRY_FROM:'sender@example.invalid',MIDNIGHT_ENQUIRY_TO:'ops@example.invalid'};
 const input=()=>({requestId:randomUUID(),mode:'Road',urgency:'Urgent',dangerousGoods:'No',collection:'London',delivery:'Paris',description:'Synthetic freight',name:'Preview Test',email:'test@example.invalid'});
 function fixture(options={}) {
   const rows=new Map(),calls=[];
