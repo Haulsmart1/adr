@@ -12,6 +12,8 @@ const root=path.resolve(__dirname,'..');
     b.onLoad({filter:/pages\/operations\/enquiries\/\[reference\]\.js$/},({path:p})=>({contents:require('node:fs').readFileSync(p,'utf8').split('export async function getServerSideProps')[0],loader:'jsx'}));
     b.onResolve({filter:/^next\/(head|link)$|^@\/styles\/|^@\/lib\/server\//},({path:p})=>({path:p,namespace:'fixture'}));
     b.onResolve({filter:/^@\/lib\//},({path:p})=>({path:path.join(root,p.slice(2))}));
+    b.onResolve({filter:/^@\/components\//},({path:p})=>({path:path.join(root,p.slice(2))}));
+    b.onLoad({filter:/components\/.*\.js$/},({path:p})=>({contents:require('node:fs').readFileSync(p,'utf8'),loader:'jsx'}));
     b.onLoad({filter:/.*/,namespace:'fixture'},({path:p})=>({resolveDir:root,loader:'jsx',contents:p==='next/link'?`export default function Link({children,href}){return <a href={href}>{children}</a>}`:p==='next/head'?`export default function Head(){return null}`:p.includes('/styles/')?`export default {}`:`export const releaseRouteAccess=()=>{},repository=()=>{},emailConfigured=()=>{};`}));
   }}]});
   const tick=()=>new Promise(resolve=>setTimeout(resolve,25));
