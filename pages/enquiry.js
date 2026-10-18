@@ -20,10 +20,11 @@ export default function Enquiry({ deliveryEnabled }) {
   const statusRef = useRef(null);
   const submitting = useRef(false);
   const restoredOwner = useRef(null);
+  const fileReadGeneration = useRef(0);
   const identity = useRef({ owner, sessionStatus });
   // A late response belongs to the exact session that submitted it, even if
   // that same account signs in again after another account used the tab.
-  if (identity.current.owner !== owner || identity.current.sessionStatus !== sessionStatus) identity.current = { owner, sessionStatus };
+  if (identity.current.owner !== owner || identity.current.sessionStatus !== sessionStatus) { identity.current = { owner, sessionStatus }; fileReadGeneration.current++; }
   useEffect(() => {
     submitting.current = false; setBusy(false); setReadingFiles(false);
     if (sessionStatus === 'loading') return;
@@ -101,14 +102,17 @@ export default function Enquiry({ deliveryEnabled }) {
           <label htmlFor="enquiry-files">SDS, DGN, packing list or photographs</label>
           <input ref={fileInput} id="enquiry-files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg" onChange={async event => {
             const readingIdentity = identity.current;
+            const generation = ++fileReadGeneration.current;
+            const isCurrentRead = () => identity.current === readingIdentity && fileReadGeneration.current === generation;
+            const input = event.target;
             const files = Array.from(event.target.files || []);
-            setDocuments([]);
-            if (files.length > 3 || files.some(file => file.size > 1048576)) { setStatus({state:uncertain?'unconfirmed':'invalid',message:'Choose up to three PDF, PNG or JPEG files, each 1 MB or smaller.'}); event.target.value=''; return; }
+            if (!files.length) { setReadingFiles(false); return; }
+            if (files.length > 3 || files.some(file => file.size > 1048576)) { setReadingFiles(false); setStatus({state:uncertain?'unconfirmed':'invalid',message:'Choose up to three PDF, PNG or JPEG files, each 1 MB or smaller. Your previous documents are retained.'}); input.value=''; return; }
             setReadingFiles(true);
             try { const values = await Promise.all(files.map(file => new Promise((resolve,reject) => { const reader = new FileReader(); reader.onload=()=>resolve({name:file.name,content:String(reader.result).split(',')[1]}); reader.onerror=reject; reader.readAsDataURL(file); })));
-              if (identity.current !== readingIdentity) return;
+              if (!isCurrentRead()) return;
               setDocuments(values); if(status?.state === 'received') requestId.current=crypto.randomUUID(); if(!uncertain) setStatus(null);
-            } catch { if (identity.current === readingIdentity) setStatus({state:uncertain?'unconfirmed':'invalid',message:'Could not read the documents. Please select them again.'}); } finally { if (identity.current === readingIdentity) setReadingFiles(false); }
+            } catch { if (isCurrentRead()) { input.value=''; setStatus({state:uncertain?'unconfirmed':'invalid',message:'Could not read the documents. Your previous documents are retained. Please select them again.'}); } } finally { if (isCurrentRead()) setReadingFiles(false); }
           }}/>{documents.length > 0 && <p>Ready to attach: {documents.map(file => file.name).join(', ')}</p>}<p>Up to three PDF, PNG or JPEG files, 1 MB each. Files are stored privately with your enquiry. After a refresh, reselect the same files before retrying an uncertain submission.</p>
         </fieldset>}
         <p>We use these details to handle your freight enquiry. <a href="/privacy">Privacy and cookies</a>. This tab saves a draft and restores it for up to 24 hours. Clear it below when finished, especially on a shared device. Documents are uploaded only when you submit and are not saved in this browser draft. Do not include passwords or payment-card details.</p>
@@ -119,7 +123,7 @@ export default function Enquiry({ deliveryEnabled }) {
       <p>The email link opens your email app; you must send the message there. You can also copy the brief into your own email to <a href="mailto:freight@midnight-express.org">freight@midnight-express.org</a>.</p>
       {uncertain && <p>Receipt is uncertain. Your details are locked to preserve the original submission. Reselect the same documents after a refresh, then retry to recover its receipt, or call operations before starting another enquiry.</p>}
       <label htmlFor="enquiry-brief">Copyable shipment details</label><textarea id="enquiry-brief" readOnly rows={10} value={text}/>
-      <div className={s.actions}><a href={'mailto:freight@midnight-express.org?subject=' + encodeURIComponent('Midnight freight enquiry') + '&body=' + encodeURIComponent(text)}>Open enquiry in email app</a><button type="button" disabled={busy || readingFiles || sessionStatus === 'loading'} onClick={() => { if(uncertain && !window.confirm('This enquiry may already be stored. Clearing its draft prevents receipt recovery here. Call operations before submitting a replacement. Clear it anyway?')) return; setData(empty); setStatus(null); setDocuments([]); if (fileInput.current) fileInput.current.value = ''; requestId.current = crypto.randomUUID(); try { sessionStorage.removeItem('midnight-enquiry'); } catch {} }}>Clear draft</button></div>
+      <div className={s.actions}><a href={'mailto:freight@midnight-express.org?subject=' + encodeURIComponent('Midnight freight enquiry') + '&body=' + encodeURIComponent(text)}>Open enquiry in email app</a><button type="button" disabled={busy || readingFiles || sessionStatus === 'loading'} onClick={() => { if(uncertain && !window.confirm('This enquiry may already be stored. Clearing its draft prevents receipt recovery here. Call operations before submitting a replacement. Clear it anyway?')) return; fileReadGeneration.current++; setData(empty); setStatus(null); setDocuments([]); if (fileInput.current) fileInput.current.value = ''; requestId.current = crypto.randomUUID(); try { sessionStorage.removeItem('midnight-enquiry'); } catch {} }}>Clear draft</button></div>
     </div>
   </FreightLayout>;
 }
