@@ -19,9 +19,15 @@ export default function Enquiry({ deliveryEnabled }) {
   const fileInput = useRef(null);
   const statusRef = useRef(null);
   const submitting = useRef(false);
+  const identity = useRef({ owner, sessionStatus });
+  // A late response belongs to the exact session that submitted it, even if
+  // that same account signs in again after another account used the tab.
+  if (identity.current.owner !== owner || identity.current.sessionStatus !== sessionStatus) identity.current = { owner, sessionStatus };
   useEffect(() => {
+    submitting.current = false; setBusy(false); setReadingFiles(false);
     if (sessionStatus === 'loading') return;
     setData(empty); setStatus(null); setDocuments([]);
+    if (fileInput.current) fileInput.current.value = '';
     requestId.current = crypto.randomUUID();
     try {
       const saved = JSON.parse(sessionStorage.getItem('midnight-enquiry') || 'null');
@@ -48,6 +54,7 @@ export default function Enquiry({ deliveryEnabled }) {
   async function submit(event) {
     event.preventDefault();
     if (submitting.current) return;
+    const submittedIdentity = identity.current;
     let payload;
     try { payload = { ...normalize(data), requestId: requestId.current, attachments: documents }; } catch (error) { setStatus({ state: uncertain ? 'unconfirmed' : 'invalid', message: error.message }); return; }
     submitting.current = true; setBusy(true);
@@ -58,12 +65,13 @@ export default function Enquiry({ deliveryEnabled }) {
     try {
       const response = await fetch('/api/enquiry', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: controller.signal });
       const result = await response.json();
+      if (identity.current !== submittedIdentity) return;
       if (!['received', 'accepted', 'unconfirmed', 'unavailable', 'limited', 'invalid'].includes(result.state)) throw new Error('Unexpected response');
       if (['received','accepted'].includes(result.state) && !response.ok) throw new Error('Unconfirmed response');
       const nextStatus = uncertain && !['received','accepted'].includes(result.state) ? {...result, state:'unconfirmed'} : result;
       setStatus(nextStatus); save(data, nextStatus);
-    } catch { setStatus(pending); save(data, pending); }
-    finally { clearTimeout(timer); setBusy(false); submitting.current = false; statusRef.current?.focus(); }
+    } catch { if (identity.current === submittedIdentity) { setStatus(pending); save(data, pending); } }
+    finally { clearTimeout(timer); if (identity.current === submittedIdentity) { setBusy(false); submitting.current = false; statusRef.current?.focus(); } }
   }
   const text = brief(data);
   return <FreightLayout title="Request a Freight Quotation | Midnight Express" description="Prepare a road, air or sea freight enquiry for UK, European and international movements. Share locations, cargo details and delivery requirements with operations." path="/enquiry">
@@ -84,13 +92,15 @@ export default function Enquiry({ deliveryEnabled }) {
         {deliveryEnabled && <fieldset disabled={busy || readingFiles || sessionStatus === 'loading'}><legend>Shipment documents (optional)</legend>
           <label htmlFor="enquiry-files">SDS, DGN, packing list or photographs</label>
           <input ref={fileInput} id="enquiry-files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg" onChange={async event => {
+            const readingIdentity = identity.current;
             const files = Array.from(event.target.files || []);
             setDocuments([]);
             if (files.length > 3 || files.some(file => file.size > 1048576)) { setStatus({state:uncertain?'unconfirmed':'invalid',message:'Choose up to three PDF, PNG or JPEG files, each 1 MB or smaller.'}); event.target.value=''; return; }
             setReadingFiles(true);
             try { const values = await Promise.all(files.map(file => new Promise((resolve,reject) => { const reader = new FileReader(); reader.onload=()=>resolve({name:file.name,content:String(reader.result).split(',')[1]}); reader.onerror=reject; reader.readAsDataURL(file); })));
+              if (identity.current !== readingIdentity) return;
               setDocuments(values); if(status?.state === 'received') requestId.current=crypto.randomUUID(); if(!uncertain) setStatus(null);
-            } catch { setStatus({state:uncertain?'unconfirmed':'invalid',message:'Could not read the documents. Please select them again.'}); } finally {setReadingFiles(false);}
+            } catch { if (identity.current === readingIdentity) setStatus({state:uncertain?'unconfirmed':'invalid',message:'Could not read the documents. Please select them again.'}); } finally { if (identity.current === readingIdentity) setReadingFiles(false); }
           }}/><p>Up to three PDF, PNG or JPEG files, 1 MB each. Files are stored privately with your enquiry. After a refresh, reselect the same files before retrying an uncertain submission.</p>
         </fieldset>}
         <p>We use these details to handle your freight enquiry. <a href="/privacy">Privacy and cookies</a>. This tab saves a draft and restores it for up to 24 hours. Clear it below when finished, especially on a shared device. Documents are uploaded only when you submit and are not saved in this browser draft. Do not include passwords or payment-card details.</p>
