@@ -7,7 +7,7 @@ const subject = '12345678-1234-4234-8234-123456789abc';
 const user = { id: subject, email: 'stuart@adrcarriers.net', email_confirmed_at: new Date(now-1000).toISOString() };
 const env = { MIDNIGHT_AUTH_PROJECT_REF: project, NEXT_PUBLIC_SUPABASE_URL: `https://${project}.supabase.co`, MIDNIGHT_ADMIN_BOOTSTRAP_EXPIRES_AT: new Date(now+300000).toISOString() };
 test('bootstrap rejects shared projects, mismatched provider and expired or excessive window', async () => {
-  for (const ref of ['', 'rdxolzuofkslgsvvvmrq', 'llxliojjtofqdmddbdud']) assert.throws(() => projectConfig({ ...env, MIDNIGHT_AUTH_PROJECT_REF: ref }));
+  for (const ref of ['', 'rdxolzuofkslgsvvvmrq', 'jrhvorrsppjzbkropmub', 'llxliojjtofqdmddbdud']) assert.throws(() => projectConfig({ ...env, MIDNIGHT_AUTH_PROJECT_REF: ref, NEXT_PUBLIC_SUPABASE_URL: `https://${ref}.supabase.co` }));
   assert.throws(() => projectConfig({ ...env, NEXT_PUBLIC_SUPABASE_URL: 'https://other.supabase.co' }));
   for (const deadline of ['',new Date(now-1).toISOString(),new Date(now+3600001).toISOString()]) {
     await assert.rejects(bootstrap({ env: {...env,MIDNIGHT_ADMIN_BOOTSTRAP_EXPIRES_AT:deadline}, now }), /window/);

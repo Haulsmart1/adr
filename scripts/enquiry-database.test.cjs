@@ -7,6 +7,10 @@ test('real PostgreSQL: concurrent capture, transactional documents, audit, confl
   try {
     const args={requestKey:prefix,fingerprint:prefix,data:{name:'Synthetic database acceptance',mode:'Air'},notification:'disabled',rates:[],files:[{name:'test.pdf',mediaType:'application/pdf',digest:'synthetic',content:Buffer.from('%PDF-1.4\n%%EOF')}]};
     const rows=await Promise.all(Array.from({length:5},()=>repo.capture(args)));assert.equal(new Set(rows.map(r=>r.reference)).size,1);
+    const retryArgs={...args,requestKey:randomUUID(),rates:[{key:'retry:'+prefix,limit:1}]};
+    const receipt=await repo.capture(retryArgs);
+    for(let i=0;i<7;i++)assert.equal((await repo.capture(retryArgs)).reference,receipt.reference);
+    assert.equal((await repo.capture({...retryArgs,requestKey:randomUUID()})).limited,true);
     const ref=rows[0].reference,detail=await repo.detail(ref);assert.equal(detail.details.name,args.data.name);assert.equal(detail.attachments.length,1);assert.equal(detail.audit.length,1);
     assert.equal((await repo.download(ref,detail.attachments[0].id)).content.toString(),'%PDF-1.4\n%%EOF');assert.equal(await repo.download('MID-'+'0'.repeat(32),detail.attachments[0].id),undefined);
     assert.equal((await repo.capture({...args,fingerprint:'changed'})).conflict,true);
