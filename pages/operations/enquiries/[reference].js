@@ -6,7 +6,12 @@ import { repository } from '@/lib/server/enquiryRepository.cjs';
 import { emailConfigured } from '@/lib/server/enquiryCapture.cjs';
 import { labels } from '@/lib/freight/enquiry.cjs';
 import s from '@/styles/Enquiry.module.css';
-export default function EnquiryDetail({ row, error, canNotify }) {
+export default function EnquiryDetail(props) {
+  // Next reuses this page on client navigation. Scope mutable form state and
+  // pending acknowledgements to one stored enquiry, never the previous record.
+  return <EnquiryDetailRecord key={props.row?.reference || 'unavailable'} {...props}/>;
+}
+function EnquiryDetailRecord({ row, error, canNotify }) {
   const [message,setMessage]=useState(''),[busy,setBusy]=useState(false);
   const [status,setStatus]=useState(row?.status || 'new');
   const [savedStatus,setSavedStatus]=useState(row?.status || 'new');
