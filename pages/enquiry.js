@@ -19,6 +19,7 @@ export default function Enquiry({ deliveryEnabled }) {
   const fileInput = useRef(null);
   const statusRef = useRef(null);
   const submitting = useRef(false);
+  const restoredOwner = useRef(null);
   const identity = useRef({ owner, sessionStatus });
   // A late response belongs to the exact session that submitted it, even if
   // that same account signs in again after another account used the tab.
@@ -26,6 +27,10 @@ export default function Enquiry({ deliveryEnabled }) {
   useEffect(() => {
     submitting.current = false; setBusy(false); setReadingFiles(false);
     if (sessionStatus === 'loading') return;
+    // A transient provider refresh must not discard the same owner's unsent
+    // documents or uncertain receipt. A different resolved owner starts clean.
+    if (restoredOwner.current === owner) return;
+    restoredOwner.current = owner;
     setData(empty); setStatus(null); setDocuments([]);
     if (fileInput.current) fileInput.current.value = '';
     requestId.current = crypto.randomUUID();
@@ -73,6 +78,9 @@ export default function Enquiry({ deliveryEnabled }) {
     } catch { if (identity.current === submittedIdentity) { setStatus(pending); save(data, pending); } }
     finally { clearTimeout(timer); if (identity.current === submittedIdentity) { setBusy(false); submitting.current = false; statusRef.current?.focus(); } }
   }
+  // Session refreshes can temporarily remove the user. Keep the owner-bound
+  // draft in memory/storage, but never expose it while identity is unresolved.
+  if (sessionStatus === 'loading' || restoredOwner.current !== owner) return <FreightLayout title="Request a Freight Quotation | Midnight Express" path="/enquiry"><div className={s.container}><h1>Checking your sign-in</h1><p role="status">Your draft is hidden while we check your session. No new enquiry can be submitted while your session is checked.</p></div></FreightLayout>;
   const text = brief(data);
   return <FreightLayout title="Request a Freight Quotation | Midnight Express" description="Prepare a road, air or sea freight enquiry for UK, European and international movements. Share locations, cargo details and delivery requirements with operations." path="/enquiry">
     <div className={s.container}>
@@ -101,7 +109,7 @@ export default function Enquiry({ deliveryEnabled }) {
               if (identity.current !== readingIdentity) return;
               setDocuments(values); if(status?.state === 'received') requestId.current=crypto.randomUUID(); if(!uncertain) setStatus(null);
             } catch { if (identity.current === readingIdentity) setStatus({state:uncertain?'unconfirmed':'invalid',message:'Could not read the documents. Please select them again.'}); } finally { if (identity.current === readingIdentity) setReadingFiles(false); }
-          }}/><p>Up to three PDF, PNG or JPEG files, 1 MB each. Files are stored privately with your enquiry. After a refresh, reselect the same files before retrying an uncertain submission.</p>
+          }}/>{documents.length > 0 && <p>Ready to attach: {documents.map(file => file.name).join(', ')}</p>}<p>Up to three PDF, PNG or JPEG files, 1 MB each. Files are stored privately with your enquiry. After a refresh, reselect the same files before retrying an uncertain submission.</p>
         </fieldset>}
         <p>We use these details to handle your freight enquiry. <a href="/privacy">Privacy and cookies</a>. This tab saves a draft and restores it for up to 24 hours. Clear it below when finished, especially on a shared device. Documents are uploaded only when you submit and are not saved in this browser draft. Do not include passwords or payment-card details.</p>
         {deliveryEnabled && <button type="submit" disabled={busy || readingFiles || sessionStatus === 'loading' || status?.state === 'received'}>{busy ? 'Contacting mail server…' : 'Submit enquiry'}</button>}
