@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/sports" },
     title: 'Sports & Motorsport | ADR Carriers Ltd',
     description: 'ADR-compliant logistics for motorsport teams and sporting events. Delivery of fuels, gases, and lithium batteries across the UK and Europe.',
 };

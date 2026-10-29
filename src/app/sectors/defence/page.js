@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/defence" },
     title: 'Defence & Aerospace | ADR Carriers Ltd',
     description:
         'Secure ADR transport of explosives, oxidisers, lithium batteries, and critical materials to defence, aerospace, and military sites — compliant with ADR, IMDG & IATA.',

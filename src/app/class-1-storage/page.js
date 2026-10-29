@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/class-1-storage" },
     title: 'Class 1 Explosives Storage | ADR Carriers Ltd',
     description:
         'Secure explosives storage via accredited partners. EXII/EXIII transport, security plans, DGSA oversight & 24/7 access. Fully ADR compliant.',

@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/utilities" },
     title: 'Utilities & Infrastructure | ADR Carriers Ltd',
     description:
         'Compliant transport of corrosives, batteries, and chemicals for utility providers, national grid, telecoms and infrastructure projects.',

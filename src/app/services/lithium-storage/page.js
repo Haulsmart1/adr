@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/services/lithium-storage" },
     title: 'Lithium Battery Storage | Fire-Rated Secure Warehousing | ADR Carriers Ltd',
     description:
         'Secure, ventilated, and fire-rated storage for lithium batteries (Class 9) under ADR warehousing standards. Long-term storage for UN3480 & UN3090.',
@@ -20,7 +21,7 @@ export default function LithiumStoragePage() {
                 </h1>
 
                 <p className="text-lg leading-relaxed">
-                    <strong>ADR Carriers Ltd</strong> offers fully secure, temperature-controlled warehousing for lithium batteries under ADR Class 9 standards — including <strong>UN3480</strong> lithium-ion and <strong>UN3090</strong> lithium-metal types. Whether you're importing EV components or storing industrial packs, we provide safe, scalable logistics.
+                    <strong>ADR Carriers Ltd</strong> offers fully secure, temperature-controlled warehousing for lithium batteries under ADR Class 9 standards — including <strong>UN3480</strong> lithium-ion and <strong>UN3090</strong> lithium-metal types. Whether you’re importing EV components or storing industrial packs, we provide safe, scalable logistics.
                 </p>
 
                 <h2 className="text-2xl font-semibold pt-4">Facility Capabilities</h2>

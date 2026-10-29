@@ -1,0 +1,96 @@
+
+> adrcarriers-next@0.1.0 build
+> next build
+
+   ▲ Next.js 14.1.0
+
+   Creating an optimized production build ...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/46) ...
+   Generating static pages (11/46) 
+   Generating static pages (22/46) 
+   Generating static pages (34/46) 
+ ✓ Generating static pages (46/46) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                        Size     First Load JS
+┌ ○ /                                              218 B          91.2 kB
+├ ○ /_not-found                                    886 B          85.1 kB
+├ λ /admin                                         219 B          84.5 kB
+├ ○ /admin/login                                   5.99 kB         148 kB
+├ ○ /adr-resources                                 219 B          84.5 kB
+├ ○ /areas/cumbria                                 218 B          91.2 kB
+├ λ /auth/callback                                 0 B                0 B
+├ ○ /class-1-storage                               219 B          84.5 kB
+├ ○ /contact                                       1.54 kB        85.8 kB
+├ λ /employment                                    219 B          84.5 kB
+├ ○ /get-a-quote                                   1.54 kB        85.8 kB
+├ ○ /icon.png                                      0 B                0 B
+├ ○ /policy                                        218 B          91.2 kB
+├ ○ /privacy-policy                                219 B          84.5 kB
+├ ○ /sectors                                       219 B          84.5 kB
+├ ○ /sectors/agriculture                           219 B          84.5 kB
+├ ○ /sectors/automotive                            219 B          84.5 kB
+├ ○ /sectors/defence                               219 B          84.5 kB
+├ ○ /sectors/education                             219 B          84.5 kB
+├ ○ /sectors/energy                                219 B          84.5 kB
+├ ○ /sectors/entertainment                         219 B          84.5 kB
+├ ○ /sectors/healthcare                            219 B          84.5 kB
+├ ○ /sectors/marine                                220 B          84.5 kB
+├ ○ /sectors/offshore                              219 B          84.5 kB
+├ ○ /sectors/petrochemical                         219 B          84.5 kB
+├ ○ /sectors/sports                                219 B          84.5 kB
+├ ○ /sectors/utilities                             219 B          84.5 kB
+├ ○ /services                                      218 B          91.2 kB
+├ ○ /services/3pl-distribution                     220 B          84.5 kB
+├ ○ /services/adr-dangerous-goods                  218 B          91.2 kB
+├ ○ /services/customs                              220 B          84.5 kB
+├ ○ /services/damaged-defective-battery-transport  218 B          91.2 kB
+├ ○ /services/explosives                           218 B          91.2 kB
+├ ○ /services/express-europe-ni                    218 B          91.2 kB
+├ ○ /services/hazardous-storage                    219 B          84.5 kB
+├ ○ /services/hazardous-waste                      219 B          84.5 kB
+├ ○ /services/ireland-dangerous-goods              218 B          91.2 kB
+├ ○ /services/lithium-storage                      219 B          84.5 kB
+├ ○ /services/lithium-transport                    218 B          91.2 kB
+├ ○ /services/radioactive                          218 B          91.2 kB
+├ ○ /services/time-critical-transport              218 B          91.2 kB
+├ ○ /services/un3480-un3481-transport              218 B          91.2 kB
+├ ○ /subcontractor-register                        5.44 kB         148 kB
+└ ○ /thank-you                                     218 B          84.5 kB
++ First Load JS shared by all                      84.2 kB
+  ├ chunks/8069-7048395d806de99c.js                28.9 kB
+  ├ chunks/fd9d1056-2061e66a19ca26f0.js            53.4 kB
+  └ other shared chunks (total)                    1.96 kB
+
+
+ƒ Middleware                                       206 kB
+
+○  (Static)   prerendered as static content
+λ  (Dynamic)  server-rendered on demand using Node.js
+
+
+> adrcarriers-next@0.1.0 postbuild
+> next-sitemap
+
+✨ [next-sitemap] Loading next-sitemap config: file:///workspace/adr/next-sitemap.config.js
+✅ [next-sitemap] Generation completed
+┌───────────────┬────────┐
+│ (index)       │ Values │
+├───────────────┼────────┤
+│ indexSitemaps │ 0      │
+│ sitemaps      │ 1      │
+└───────────────┴────────┘
+-----------------------------------------------------
+ SITEMAPS 
+-----------------------------------------------------
+
+   ○ https://adrcarriers.com/sitemap.xml
+
+

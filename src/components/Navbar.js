@@ -1,66 +1,36 @@
-import Link from 'next/link'
-
+import Link from "next/link";
+const links = [
+  ["/services", "Services"],
+  ["/services/express-europe-ni", "UK & Europe"],
+  ["/adr-resources", "Guidance"],
+  ["/contact", "Contact"],
+];
 export default function Navbar() {
-    return (
-        <nav className="sticky top-0 z-50 bg-black px-6 py-4 text-white shadow-md">
-            <div className="mx-auto flex max-w-7xl items-center justify-between">
-
-                <Link
-                    href="/"
-                    className="text-xl font-bold transition hover:text-gray-300"
-                >
-                    ADR Carriers Ltd
-                </Link>
-
-                <div className="flex items-center gap-6 text-sm font-medium">
-
-                    <Link href="/services" className="transition hover:text-gray-300">
-                        Services
-                    </Link>
-
-                    <Link href="/services/explosives" className="transition hover:text-gray-300">
-                        Explosives
-                    </Link>
-
-                    <Link href="/services/radioactive" className="transition hover:text-gray-300">
-                        Radioactive
-                    </Link>
-
-                    <Link href="/services/customs" className="transition hover:text-gray-300">
-                        Customs
-                    </Link>
-
-                    <Link href="/adr-resources" className="transition hover:text-gray-300">
-                        Resources
-                    </Link>
-
-                    <Link href="/subcontractor-register" className="transition hover:text-gray-300">
-                        Subcontractors
-                    </Link>
-
-                    <Link href="/employment" className="transition hover:text-gray-300">
-                        Careers
-                    </Link>
-
-                    <Link href="/policy" className="transition hover:text-gray-300">
-                        Policies
-                    </Link>
-
-                    <Link href="/contact" className="transition hover:text-gray-300">
-                        Contact
-                    </Link>
-
-                    {/* magic link admin login */}
-                    <Link
-                        href="/admin/login"
-                        className="text-xs text-gray-400 transition hover:text-white"
-                    >
-                        Admin
-                    </Link>
-
-                </div>
-
-            </div>
-        </nav>
-    )
+  return (
+    <header className="bg-gray-950 text-white">
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
+      <nav aria-label="Main navigation" className="mx-auto max-w-6xl px-5 py-4">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <Link href="/" className="text-xl font-bold">
+            ADR Carriers Ltd
+          </Link>
+          <a className="underline font-semibold py-3" href="tel:+448009991263">0800 999 1263</a>
+          <Link className="quote-button" href="/get-a-quote">
+            Get a quote
+          </Link>
+        </div>
+        <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+          {links.map(([href, label]) => (
+            <li key={href}>
+              <Link className="hover:underline" href={href}>
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
 }

@@ -1,0 +1,113 @@
+[
+  {
+    "name": "home",
+    "requested_url": "http://127.0.0.1:3000/",
+    "final_url": "http://127.0.0.1:3000/",
+    "fetch_time": "2026-10-29T21:38:55.323Z",
+    "lighthouse_version": "13.6.0",
+    "form_factor": "mobile",
+    "throttling_method": "simulate",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "numeric_value": 762.2607,
+        "display_value": "0.8\u00a0s"
+      },
+      "largest-contentful-paint": {
+        "numeric_value": 762.2607,
+        "display_value": "0.8\u00a0s"
+      },
+      "total-blocking-time": {
+        "numeric_value": 5.5,
+        "display_value": "10\u00a0ms"
+      },
+      "cumulative-layout-shift": {
+        "numeric_value": 0,
+        "display_value": "0"
+      },
+      "speed-index": {
+        "numeric_value": 762.2607,
+        "display_value": "0.8\u00a0s"
+      }
+    }
+  },
+  {
+    "name": "quote",
+    "requested_url": "http://127.0.0.1:3000/get-a-quote",
+    "final_url": "http://127.0.0.1:3000/get-a-quote",
+    "fetch_time": "2026-10-29T21:39:06.028Z",
+    "lighthouse_version": "13.6.0",
+    "form_factor": "mobile",
+    "throttling_method": "simulate",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "numeric_value": 755.9876999999999,
+        "display_value": "0.8\u00a0s"
+      },
+      "largest-contentful-paint": {
+        "numeric_value": 755.9876999999999,
+        "display_value": "0.8\u00a0s"
+      },
+      "total-blocking-time": {
+        "numeric_value": 4.5,
+        "display_value": "0\u00a0ms"
+      },
+      "cumulative-layout-shift": {
+        "numeric_value": 0,
+        "display_value": "0"
+      },
+      "speed-index": {
+        "numeric_value": 755.9876999999999,
+        "display_value": "0.8\u00a0s"
+      }
+    }
+  },
+  {
+    "name": "live-baseline",
+    "requested_url": "https://adrcarriers.com/",
+    "final_url": "https://adrcarriers.com/",
+    "fetch_time": "2026-10-29T21:33:28.255Z",
+    "lighthouse_version": "13.6.0",
+    "form_factor": "mobile",
+    "throttling_method": "simulate",
+    "scores": {
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "numeric_value": 1416.163,
+        "display_value": "1.4\u00a0s"
+      },
+      "largest-contentful-paint": {
+        "numeric_value": 2125.163,
+        "display_value": "2.1\u00a0s"
+      },
+      "total-blocking-time": {
+        "numeric_value": 168,
+        "display_value": "170\u00a0ms"
+      },
+      "cumulative-layout-shift": {
+        "numeric_value": 0,
+        "display_value": "0"
+      },
+      "speed-index": {
+        "numeric_value": 3899.477900945256,
+        "display_value": "3.9\u00a0s"
+      }
+    }
+  }
+]

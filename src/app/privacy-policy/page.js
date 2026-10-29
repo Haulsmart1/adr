@@ -1,5 +1,6 @@
 // app/privacy-policy/page.js
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/privacy-policy" },
     title: 'Privacy Policy | ADR Carriers Ltd',
     description: 'Learn how we collect, use, and protect your personal data at ADR Carriers Ltd.',
 }

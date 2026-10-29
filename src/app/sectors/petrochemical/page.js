@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/petrochemical" },
     title: 'Petrochemical | ADR Carriers Ltd',
     description:
         'Flammable, explosive, and toxic goods delivered to chemical plants, refineries, and fuel depots across the UK & EU — fully ADR, IMDG and IATA compliant.',

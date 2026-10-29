@@ -1,8 +1,19 @@
-/** @type {import('next-sitemap').IConfig} */
+const routes = require("./src/data/public-routes.json");
+/** Explicit list keeps private, callback and completion URLs out of the sitemap. */
 module.exports = {
-    siteUrl: 'https://adrcarriers.com',
-    generateRobotsTxt: true,
-    changefreq: 'weekly',
-    priority: 0.7,
-    outDir: './public', // ✅ THIS IS IMPORTANT
+  siteUrl: "https://adrcarriers.com",
+  generateRobotsTxt: true,
+  generateIndexSitemap: false,
+  outDir: "./public",
+  exclude: ["/**"],
+  additionalPaths: async () => routes.map((route) => ({ loc: route })),
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin", "/auth"],
+      },
+    ],
+  },
 };

@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://www.gov.uk/shipping-dangerous-goods",
+    "status": 200,
+    "final_url": "https://www.gov.uk/moving-dangerous-goods"
+  },
+  {
+    "url": "https://unece.org/transport/dangerous-goods/adr",
+    "error": "HTTP Error 403: Forbidden",
+    "verification": "manual review required; no claim that destination is broken"
+  }
+]

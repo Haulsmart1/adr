@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/services/customs" },
     title: 'Customs & Brexit Support | ADR Carriers Ltd',
     description:
         'Navigate post-Brexit hazardous goods regulations with ADR Carriers. Full support for TSS, CTC, and Northern Ireland transit.',
@@ -56,7 +57,7 @@ export default function CustomsPage() {
                 </ul>
 
                 <div className="pt-6 text-lg leading-relaxed">
-                    Whether it's a complex ADR consignment or a same-day emergency export, our customs experts and transport planners keep your goods compliant, cleared, and moving — every hour of every day.
+                    Whether it’s a complex ADR consignment or a same-day emergency export, our customs experts and transport planners keep your goods compliant, cleared, and moving — every hour of every day.
                 </div>
 
                 <div className="text-center pt-6">

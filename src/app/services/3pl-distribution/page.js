@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/services/3pl-distribution" },
     title: '3PL Hazardous Goods Storage & Distribution | ADR Carriers Ltd',
     description: 'Specialist 3PL storage and distribution of ADR Classes 2.3, 4, 5, 6, 7, 8 & 9 hazardous goods across the UK and Europe. Secure, compliant warehousing and logistics.',
 };

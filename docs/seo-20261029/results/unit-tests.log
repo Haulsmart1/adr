@@ -1,0 +1,17 @@
+
+> adrcarriers-next@0.1.0 test:seo
+> node --test tests/competitive-seo.test.cjs
+
+✔ every transport guide has a routable page, unique metadata and distinct content (0.926374ms)
+✔ sitemap uses only explicit public routes and excludes completion and private routes (0.996118ms)
+✔ JSON-LD serialization prevents script termination and metadata stays on the primary host (1.14017ms)
+✔ regional publication is limited to the evidenced Cumbria contact area (0.123171ms)
+✔ deployed enquiry validation rejects malformed input and preserves optional phone (0.867118ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 64.215704

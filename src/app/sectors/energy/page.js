@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/energy" },
     title: 'Energy & Renewables | ADR Carriers Ltd',
     description:
         'Specialist delivery of lithium batteries, solar chemicals, and high-voltage components to energy hubs across the UK and EU.',

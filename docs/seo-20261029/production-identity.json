@@ -1,0 +1,22 @@
+{
+  "inspected_at_utc": "2026-10-29",
+  "domain": "adrcarriers.com",
+  "team_id": "team_4s3slf7RDwc6sdOHUHIp2NoJ",
+  "project_id": "prj_63KruBvhNeD4K5phS3WQFTqQw22F",
+  "project_name": "adr",
+  "production_deployment_id": "dpl_B4hopTZJGPZEMx4TqvfN67zSPpgt",
+  "deployment_hostname": "adr-nwv0sqb44-haulsmart.vercel.app",
+  "deployment_source": "cli",
+  "state": "READY",
+  "target": "production",
+  "repository_identified_by_deployment_metadata": "Haulsmart1/adr",
+  "deployment_metadata_branch": "stu-development",
+  "deployment_metadata_commit": "603e019e8f16f208d488894db8e51403a9ac25ba",
+  "commit_accessible_on_github": false,
+  "github_main_base": "0e43bcc17eeb6e02e99b352d20c1e17e76a0f5ee",
+  "exact_production_source_available": false,
+  "source_export_limitations": ["deep file-tree entries truncated by connector", "large base64 source responses truncated by connector"],
+  "production_package_versions": {"next": "15.5.27", "react": "19.0.8", "react-dom": "19.0.8"},
+  "github_main_package_versions": {"next": "14.1.0", "react": "18.2.0", "react-dom": "18.2.0"},
+  "release_gate": "Recover exact production source and reconcile public SEO patch without replacing operational code or downgrading dependencies. Stuart approval required before deployment."
+}

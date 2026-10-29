@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/automotive" },
     title: 'Automotive Sector | ADR Carriers Ltd',
     description:
         'Hazardous goods transport for the automotive industry including EV battery logistics, workshop chemicals, and OEM distribution — ADR-compliant Class 1–9.',
@@ -24,7 +25,7 @@ export default function AutomotiveSectorPage() {
                 </p>
 
                 <p className="text-lg mb-4 leading-relaxed">
-                    From lithium battery carriage to workshop chemical deliveries, our certified fleet and trained ADR drivers handle Class 1–9 materials with precision. Whether you're transporting airbag units, paints, oils, or aerosols — we offer full DGSA oversight and nationwide coverage.
+                    From lithium battery carriage to workshop chemical deliveries, our certified fleet and trained ADR drivers handle Class 1–9 materials with precision. Whether you’re transporting airbag units, paints, oils, or aerosols — we offer full DGSA oversight and nationwide coverage.
                 </p>
 
                 <ul className="list-disc list-inside text-base space-y-2 mb-6">

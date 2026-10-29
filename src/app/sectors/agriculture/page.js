@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/agriculture" },
     title: 'Agriculture & Chemicals | ADR Carriers Ltd',
     description:
         'Compliant carriage of fertilisers, pesticides, flammable liquids, and agrochemicals to farms and distributors across the UK and Europe.',

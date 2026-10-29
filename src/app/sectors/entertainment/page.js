@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/entertainment" },
     title: 'Entertainment & Events | ADR Carriers Ltd',
     description: 'Hazardous materials transport for film sets, stage pyrotechnics, and touring production teams.',
 };
