@@ -51,7 +51,7 @@ const policies = [
     },
     {
         title: 'Modern Slavery and Human Trafficking Policy',
-        file: '/policy/Modern-Slavery-and-Human-Trafficking-Policy.pdf',
+        file: '/policy/Modern-Slavery-and-Human-Trafficking-Statement.pdf',
     },
     {
         title: 'Quality Management Policy',
@@ -59,7 +59,7 @@ const policies = [
     },
     {
         title: 'Security Management Policy and Code',
-        file: '/policy/Security-Management-Policy-and-Code.pdf',
+        file: '/policy/Security-Management-Policy-and-Code-of-Conduct.pdf',
     },
     {
         title: 'Subcontractor Terms and Conditions',

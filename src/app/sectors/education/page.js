@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/education" },
     title: 'Education Sector | ADR Carriers Ltd',
     description:
         'ADR-compliant transport of hazardous materials for universities, research labs, and educational institutions. Safe delivery of chemicals, batteries, and lab waste.',

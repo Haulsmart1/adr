@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/healthcare" },
     title: 'Healthcare & Biopharma | ADR Carriers Ltd',
     description:
         'Specialist transport of diagnostic chemicals, cytotoxic substances, lithium devices, and Class 6.2 & 7 materials for hospitals, labs, and pharma facilities.',

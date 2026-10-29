@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/offshore" },
     title: 'Offshore Energy | ADR Carriers Ltd',
     description: 'Specialist hazardous goods delivery to offshore oil, gas, and renewable platforms, including Class 2, 3, 5 and 8 materials.',
 };

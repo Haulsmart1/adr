@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors/marine" },
     title: 'Marine & Ports | ADR Carriers Ltd',
     description:
         'IMDG and ADR-compliant hazardous goods transport for ports, shipping vessels, offshore support, and marine logistics — including lithium batteries, flammables, and gases.',

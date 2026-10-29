@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/adr-resources" },
     title: 'ADR Resources | Dangerous Goods Regulations & Authorities',
     description:
         'Official ADR resources, regulatory bodies, and dangerous goods compliance information for UK and Europe.',
@@ -78,6 +79,13 @@ export default function ADRResourcesPage() {
                 <h1 className="text-4xl font-bold mb-4 text-gray-900">
                     ADR & Dangerous Goods Resources
                 </h1>
+                <section className="my-8 bg-white rounded-xl p-6 text-gray-900">
+                    <h2 className="text-2xl font-bold mb-4">Prepare your dangerous goods transport enquiry</h2>
+                    <p className="mb-4">Provide collection and delivery addresses, dates and the required delivery window. Include the UN number, proper shipping name, class or division, packing group where applicable, package count and type, quantity, dimensions and gross weight.</p>
+                    <p className="mb-4">For Class 1, include compatibility group and net explosive quantity. For lithium batteries, state chemistry, configuration and condition. For Class 7, supply material, activity and package details confirmed by the consignor or competent adviser. Explain any missing information and the available loading equipment.</p>
+                    <p>Use current official rules and competent advice for classification and shipment preparation. This website is enquiry guidance, not a determination of compliance or acceptance. <a className="underline font-semibold" href="/get-a-quote">Discuss your shipment</a>.</p>
+                </section>
+
 
                 <p className="text-gray-600 mb-10">
                     Useful links to official regulatory bodies, legislation and guidance

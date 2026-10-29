@@ -1,0 +1,42 @@
+[
+  {
+    "url": "http://adrcarriers.com/",
+    "status": 200,
+    "final_url": "https://adrcarriers.com/"
+  },
+  {
+    "url": "http://www.adrcarriers.com/",
+    "status": 200,
+    "final_url": "https://adrcarriers.com/"
+  },
+  {
+    "url": "http://adrcarriers.co.uk/",
+    "status": 200,
+    "final_url": "https://adrcarriers.co.uk/"
+  },
+  {
+    "url": "http://www.adrcarriers.co.uk/",
+    "status": 200,
+    "final_url": "https://www.adrcarriers.co.uk/"
+  },
+  {
+    "url": "https://adrcarriers.com/",
+    "status": 200,
+    "final_url": "https://adrcarriers.com/"
+  },
+  {
+    "url": "https://www.adrcarriers.com/",
+    "status": 200,
+    "final_url": "https://adrcarriers.com/"
+  },
+  {
+    "url": "https://adrcarriers.co.uk/",
+    "status": 200,
+    "final_url": "https://adrcarriers.co.uk/"
+  },
+  {
+    "url": "https://www.adrcarriers.co.uk/",
+    "status": 200,
+    "final_url": "https://www.adrcarriers.co.uk/"
+  }
+]

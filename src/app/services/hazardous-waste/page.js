@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/services/hazardous-waste" },
     title: 'Hazardous Waste Carrier Services | ADR Waste Transport UK & Europe | ADR Carriers Ltd',
     description:
         'Specialist hazardous waste carriers licensed to transport chemical, biological, and radioactive waste under full ADR regulations across the UK and Europe.',

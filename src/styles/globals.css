@@ -5,44 +5,82 @@
 /* 🌐 Global overrides and enhancements */
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
-    background-color: #f9fafb;
-    /* Tailwind gray-50 */
-    color: #1f2937;
-    /* Tailwind gray-800 */
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f9fafb;
+  /* Tailwind gray-50 */
+  color: #1f2937;
+  /* Tailwind gray-800 */
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 👇 Smooth scroll for UX polish */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* 🔥 Animation Utility */
 @layer utilities {
-    .animate-fade-in-up {
-        animation: fade-in-up 0.8s ease-out both;
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out both;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    @keyframes fade-in-up {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+}
+.quote-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #1d4ed8;
+  color: white;
+  font-weight: 600;
+}
+.quote-button:hover {
+  background: #1e40af;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 100;
+  background: white;
+  color: black;
+  padding: 1rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-in-up {
+    animation: none;
+  }
 }

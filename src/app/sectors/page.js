@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/sectors" },
     title: 'Sectors | ADR Carriers Ltd',
     description:
         'ADR Carriers Ltd supports critical sectors such as offshore, energy, healthcare, automotive, defence, and more — with safe and compliant dangerous goods logistics.',

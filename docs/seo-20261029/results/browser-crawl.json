@@ -1,0 +1,1804 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "date": "2026-10-29T21:37:57.003Z",
+  "crawl": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Dedicated Dangerous Goods Transport UK & Europe | ADR Carriers",
+      "description": "Discuss dedicated ADR road transport across the UK and Europe. Specialist Class 1, Class 7 and lithium battery enquiries. Call 0800 999 1263 or request a quote.",
+      "canonical": "https://adrcarriers.com/",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/adr-resources",
+      "status": 200,
+      "title": "ADR Resources | Dangerous Goods Regulations & Authorities",
+      "description": "Official ADR resources, regulatory bodies, and dangerous goods compliance information for UK and Europe.",
+      "canonical": "https://adrcarriers.com/adr-resources",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/areas/cumbria",
+      "status": 200,
+      "title": "Dangerous Goods Transport Cumbria | ADR Carriers",
+      "description": "Discuss dangerous goods road transport from Cumbria with ADR Carriers. Provide the exact collection site, load classification, handling details and delivery window.",
+      "canonical": "https://adrcarriers.com/areas/cumbria",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/class-1-storage",
+      "status": 200,
+      "title": "Class 1 Explosives Storage | ADR Carriers Ltd",
+      "description": "Secure explosives storage via accredited partners. EXII/EXIII transport, security plans, DGSA oversight & 24/7 access. Fully ADR compliant.",
+      "canonical": "https://adrcarriers.com/class-1-storage",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "title": "Contact Us | ADR Carriers Ltd",
+      "description": "Get in touch with ADR Carriers for courier services in the UK and Europe.",
+      "canonical": "https://adrcarriers.com/contact",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/get-a-quote",
+      "status": 200,
+      "title": "Get a Quote | ADR Carriers Ltd",
+      "description": "Request a courier quote for ADR transport in the UK and Europe.",
+      "canonical": "https://adrcarriers.com/get-a-quote",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/policy",
+      "status": 200,
+      "title": "Company Policies | ADR Carriers Ltd",
+      "description": "Read ADR Carriers company policies, including health and safety, environmental, data protection and subcontractor information.",
+      "canonical": "https://adrcarriers.com/policy",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/privacy-policy",
+      "status": 200,
+      "title": "Privacy Policy | ADR Carriers Ltd",
+      "description": "Learn how we collect, use, and protect your personal data at ADR Carriers Ltd.",
+      "canonical": "https://adrcarriers.com/privacy-policy",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors",
+      "status": 200,
+      "title": "Sectors | ADR Carriers Ltd",
+      "description": "ADR Carriers Ltd supports critical sectors such as offshore, energy, healthcare, automotive, defence, and more — with safe and compliant dangerous goods logistics.",
+      "canonical": "https://adrcarriers.com/sectors",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/agriculture",
+      "status": 200,
+      "title": "Agriculture & Chemicals | ADR Carriers Ltd",
+      "description": "Compliant carriage of fertilisers, pesticides, flammable liquids, and agrochemicals to farms and distributors across the UK and Europe.",
+      "canonical": "https://adrcarriers.com/sectors/agriculture",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/automotive",
+      "status": 200,
+      "title": "Automotive Sector | ADR Carriers Ltd",
+      "description": "Hazardous goods transport for the automotive industry including EV battery logistics, workshop chemicals, and OEM distribution — ADR-compliant Class 1–9.",
+      "canonical": "https://adrcarriers.com/sectors/automotive",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/defence",
+      "status": 200,
+      "title": "Defence & Aerospace | ADR Carriers Ltd",
+      "description": "Secure ADR transport of explosives, oxidisers, lithium batteries, and critical materials to defence, aerospace, and military sites — compliant with ADR, IMDG & IATA.",
+      "canonical": "https://adrcarriers.com/sectors/defence",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/education",
+      "status": 200,
+      "title": "Education Sector | ADR Carriers Ltd",
+      "description": "ADR-compliant transport of hazardous materials for universities, research labs, and educational institutions. Safe delivery of chemicals, batteries, and lab waste.",
+      "canonical": "https://adrcarriers.com/sectors/education",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/energy",
+      "status": 200,
+      "title": "Energy & Renewables | ADR Carriers Ltd",
+      "description": "Specialist delivery of lithium batteries, solar chemicals, and high-voltage components to energy hubs across the UK and EU.",
+      "canonical": "https://adrcarriers.com/sectors/energy",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/entertainment",
+      "status": 200,
+      "title": "Entertainment & Events | ADR Carriers Ltd",
+      "description": "Hazardous materials transport for film sets, stage pyrotechnics, and touring production teams.",
+      "canonical": "https://adrcarriers.com/sectors/entertainment",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/healthcare",
+      "status": 200,
+      "title": "Healthcare & Biopharma | ADR Carriers Ltd",
+      "description": "Specialist transport of diagnostic chemicals, cytotoxic substances, lithium devices, and Class 6.2 & 7 materials for hospitals, labs, and pharma facilities.",
+      "canonical": "https://adrcarriers.com/sectors/healthcare",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/marine",
+      "status": 200,
+      "title": "Marine & Ports | ADR Carriers Ltd",
+      "description": "IMDG and ADR-compliant hazardous goods transport for ports, shipping vessels, offshore support, and marine logistics — including lithium batteries, flammables, and gases.",
+      "canonical": "https://adrcarriers.com/sectors/marine",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/offshore",
+      "status": 200,
+      "title": "Offshore Energy | ADR Carriers Ltd",
+      "description": "Specialist hazardous goods delivery to offshore oil, gas, and renewable platforms, including Class 2, 3, 5 and 8 materials.",
+      "canonical": "https://adrcarriers.com/sectors/offshore",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/petrochemical",
+      "status": 200,
+      "title": "Petrochemical | ADR Carriers Ltd",
+      "description": "Flammable, explosive, and toxic goods delivered to chemical plants, refineries, and fuel depots across the UK & EU — fully ADR, IMDG and IATA compliant.",
+      "canonical": "https://adrcarriers.com/sectors/petrochemical",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/sports",
+      "status": 200,
+      "title": "Sports & Motorsport | ADR Carriers Ltd",
+      "description": "ADR-compliant logistics for motorsport teams and sporting events. Delivery of fuels, gases, and lithium batteries across the UK and Europe.",
+      "canonical": "https://adrcarriers.com/sectors/sports",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/sectors/utilities",
+      "status": 200,
+      "title": "Utilities & Infrastructure | ADR Carriers Ltd",
+      "description": "Compliant transport of corrosives, batteries, and chemicals for utility providers, national grid, telecoms and infrastructure projects.",
+      "canonical": "https://adrcarriers.com/sectors/utilities",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "title": "Dangerous Goods Road Transport Services | ADR Carriers",
+      "description": "Find dedicated ADR, lithium battery, Class 1, Class 7, UK–Europe and Ireland road transport guidance. Prepare the details needed for a specialist quotation.",
+      "canonical": "https://adrcarriers.com/services",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/3pl-distribution",
+      "status": 200,
+      "title": "3PL Hazardous Goods Storage & Distribution | ADR Carriers Ltd",
+      "description": "Specialist 3PL storage and distribution of ADR Classes 2.3, 4, 5, 6, 7, 8 & 9 hazardous goods across the UK and Europe. Secure, compliant warehousing and logistics.",
+      "canonical": "https://adrcarriers.com/services/3pl-distribution",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/adr-dangerous-goods",
+      "status": 200,
+      "title": "Dangerous Goods Courier UK & Dedicated ADR Transport | ADR Carriers",
+      "description": "Discuss dedicated dangerous goods road transport across the UK. Send your UN number, load details, collection and delivery postcodes for a tailored ADR quote.",
+      "canonical": "https://adrcarriers.com/services/adr-dangerous-goods",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dedicated ADR transport and dangerous goods courier UK",
+              "item": "https://adrcarriers.com/services/adr-dangerous-goods"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Dedicated ADR transport and dangerous goods courier UK",
+          "description": "Discuss dedicated dangerous goods road transport across the UK. Send your UN number, load details, collection and delivery postcodes for a tailored ADR quote.",
+          "url": "https://adrcarriers.com/services/adr-dangerous-goods",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/customs",
+      "status": 200,
+      "title": "Customs & Brexit Support | ADR Carriers Ltd",
+      "description": "Navigate post-Brexit hazardous goods regulations with ADR Carriers. Full support for TSS, CTC, and Northern Ireland transit.",
+      "canonical": "https://adrcarriers.com/services/customs",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/damaged-defective-battery-transport",
+      "status": 200,
+      "title": "Damaged & Defective Battery Transport Assessment | ADR Carriers",
+      "description": "Request an assessment before moving damaged, defective or recalled lithium batteries. Provide condition reports, photographs, packaging details and the proposed route.",
+      "canonical": "https://adrcarriers.com/services/damaged-defective-battery-transport",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Damaged and defective battery transport enquiries",
+              "item": "https://adrcarriers.com/services/damaged-defective-battery-transport"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Damaged and defective battery transport enquiries",
+          "description": "Request an assessment before moving damaged, defective or recalled lithium batteries. Provide condition reports, photographs, packaging details and the proposed route.",
+          "url": "https://adrcarriers.com/services/damaged-defective-battery-transport",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/explosives",
+      "status": 200,
+      "title": "Class 1 Explosives Transport UK & Europe | ADR Carriers",
+      "description": "Discuss explosives road transport with ADR Carriers. Provide the UN number, division, compatibility group, net explosive quantity and route for assessment.",
+      "canonical": "https://adrcarriers.com/services/explosives",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Class 1 explosives transport",
+              "item": "https://adrcarriers.com/services/explosives"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Class 1 explosives transport",
+          "description": "Discuss explosives road transport with ADR Carriers. Provide the UN number, division, compatibility group, net explosive quantity and route for assessment.",
+          "url": "https://adrcarriers.com/services/explosives",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/express-europe-ni",
+      "status": 200,
+      "title": "UK–Europe ADR Road Transport | Cross-border Enquiries | ADR Carriers",
+      "description": "Plan dangerous goods road transport between the UK and Europe. Discuss the load, ferry acceptance, customs responsibilities and delivery window before booking.",
+      "canonical": "https://adrcarriers.com/services/express-europe-ni",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "UK–Europe ADR road transport",
+              "item": "https://adrcarriers.com/services/express-europe-ni"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "UK–Europe ADR road transport",
+          "description": "Plan dangerous goods road transport between the UK and Europe. Discuss the load, ferry acceptance, customs responsibilities and delivery window before booking.",
+          "url": "https://adrcarriers.com/services/express-europe-ni",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/hazardous-storage",
+      "status": 200,
+      "title": "Hazardous Goods Storage | ADR Warehousing UK | ADR Carriers Ltd",
+      "description": "Secure ADR-compliant storage for hazardous goods (Classes 1–6, 8, 9). Licensed warehousing, Class 1 via partners. 3PL services, EXII/EXIII, DGSA oversight.",
+      "canonical": "https://adrcarriers.com/services/hazardous-storage",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/hazardous-waste",
+      "status": 200,
+      "title": "Hazardous Waste Carrier Services | ADR Waste Transport UK & Europe | ADR Carriers Ltd",
+      "description": "Specialist hazardous waste carriers licensed to transport chemical, biological, and radioactive waste under full ADR regulations across the UK and Europe.",
+      "canonical": "https://adrcarriers.com/services/hazardous-waste",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/ireland-dangerous-goods",
+      "status": 200,
+      "title": "Dangerous Goods Transport to Ireland | ADR Carriers",
+      "description": "Discuss UK–Ireland and Northern Ireland dangerous goods road movements. Confirm destination, ferry acceptance, shipment classification and customs arrangements.",
+      "canonical": "https://adrcarriers.com/services/ireland-dangerous-goods",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dangerous goods transport to Ireland",
+              "item": "https://adrcarriers.com/services/ireland-dangerous-goods"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Dangerous goods transport to Ireland",
+          "description": "Discuss UK–Ireland and Northern Ireland dangerous goods road movements. Confirm destination, ferry acceptance, shipment classification and customs arrangements.",
+          "url": "https://adrcarriers.com/services/ireland-dangerous-goods",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/lithium-storage",
+      "status": 200,
+      "title": "Lithium Battery Storage | Fire-Rated Secure Warehousing | ADR Carriers Ltd",
+      "description": "Secure, ventilated, and fire-rated storage for lithium batteries (Class 9) under ADR warehousing standards. Long-term storage for UN3480 & UN3090.",
+      "canonical": "https://adrcarriers.com/services/lithium-storage",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/lithium-transport",
+      "status": 200,
+      "title": "Lithium Battery Courier UK | Road Transport Enquiries | ADR Carriers",
+      "description": "Plan lithium battery road transport in the UK and Europe. Explain battery chemistry, UN number, condition, packaging and EV pack handling requirements for assessment.",
+      "canonical": "https://adrcarriers.com/services/lithium-transport",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Lithium battery courier UK",
+              "item": "https://adrcarriers.com/services/lithium-transport"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Lithium battery courier UK",
+          "description": "Plan lithium battery road transport in the UK and Europe. Explain battery chemistry, UN number, condition, packaging and EV pack handling requirements for assessment.",
+          "url": "https://adrcarriers.com/services/lithium-transport",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/radioactive",
+      "status": 200,
+      "title": "Class 7 Radioactive Transport UK & Europe | ADR Carriers",
+      "description": "Prepare a Class 7 road transport enquiry with material, activity, package and route information. Radioactive shipments are assessed against the confirmed operating scope.",
+      "canonical": "https://adrcarriers.com/services/radioactive",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Class 7 radioactive transport",
+              "item": "https://adrcarriers.com/services/radioactive"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Class 7 radioactive transport",
+          "description": "Prepare a Class 7 road transport enquiry with material, activity, package and route information. Radioactive shipments are assessed against the confirmed operating scope.",
+          "url": "https://adrcarriers.com/services/radioactive",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/time-critical-transport",
+      "status": 200,
+      "title": "Time-critical Dangerous Goods Transport | ADR Carriers",
+      "description": "Discuss an urgent dangerous goods movement with ADR Carriers. Supply the load details, collection readiness and hard delivery deadline for a feasibility assessment.",
+      "canonical": "https://adrcarriers.com/services/time-critical-transport",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Time-critical specialist road transport",
+              "item": "https://adrcarriers.com/services/time-critical-transport"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Time-critical specialist road transport",
+          "description": "Discuss an urgent dangerous goods movement with ADR Carriers. Supply the load details, collection readiness and hard delivery deadline for a feasibility assessment.",
+          "url": "https://adrcarriers.com/services/time-critical-transport",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/un3480-un3481-transport",
+      "status": 200,
+      "title": "UN3480 & UN3481 Battery Transport UK | ADR Carriers",
+      "description": "Understand standalone lithium-ion batteries versus batteries with equipment. Prepare a UN3480 or UN3481 UK road transport enquiry with the right shipment information.",
+      "canonical": "https://adrcarriers.com/services/un3480-un3481-transport",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://adrcarriers.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://adrcarriers.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "UN3480 and UN3481 lithium-ion battery transport",
+              "item": "https://adrcarriers.com/services/un3480-un3481-transport"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "UN3480 and UN3481 lithium-ion battery transport",
+          "description": "Understand standalone lithium-ion batteries versus batteries with equipment. Prepare a UN3480 or UN3481 UK road transport enquiry with the right shipment information.",
+          "url": "https://adrcarriers.com/services/un3480-un3481-transport",
+          "provider": {
+            "@id": "https://adrcarriers.com/#organisation"
+          },
+          "serviceType": "Dangerous goods road transport enquiry"
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/subcontractor-register",
+      "status": 200,
+      "title": "Sub Contractor Register | ADR Carriers Ltd",
+      "description": "Register as an ADR courier, fleet operator, or HGV subcontractor with ADR Carriers Ltd.",
+      "canonical": "https://adrcarriers.com/subcontractor-register",
+      "h1": 1,
+      "overflow": false,
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://adrcarriers.com/#organisation",
+              "name": "ADR Carriers Ltd",
+              "url": "https://adrcarriers.com",
+              "telephone": "+448009991263"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://adrcarriers.com/#website",
+              "url": "https://adrcarriers.com",
+              "name": "ADR Carriers Ltd",
+              "publisher": {
+                "@id": "https://adrcarriers.com/#organisation"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "issues": [],
+  "links": [
+    {
+      "href": "/",
+      "status": 200
+    },
+    {
+      "href": "/get-a-quote",
+      "status": 200
+    },
+    {
+      "href": "/services",
+      "status": 200
+    },
+    {
+      "href": "/services/express-europe-ni",
+      "status": 200
+    },
+    {
+      "href": "/adr-resources",
+      "status": 200
+    },
+    {
+      "href": "/contact",
+      "status": 200
+    },
+    {
+      "href": "/services/adr-dangerous-goods",
+      "status": 200
+    },
+    {
+      "href": "/services/lithium-transport",
+      "status": 200
+    },
+    {
+      "href": "/services/explosives",
+      "status": 200
+    },
+    {
+      "href": "/services/radioactive",
+      "status": 200
+    },
+    {
+      "href": "/services/ireland-dangerous-goods",
+      "status": 200
+    },
+    {
+      "href": "/areas/cumbria",
+      "status": 200
+    },
+    {
+      "href": "/services/time-critical-transport",
+      "status": 200
+    },
+    {
+      "href": "/services/un3480-un3481-transport",
+      "status": 200
+    },
+    {
+      "href": "/services/damaged-defective-battery-transport",
+      "status": 200
+    },
+    {
+      "href": "/sectors",
+      "status": 200
+    },
+    {
+      "href": "/employment",
+      "status": "not requested",
+      "reason": "backend isolation required"
+    },
+    {
+      "href": "/subcontractor-register",
+      "status": 200
+    },
+    {
+      "href": "/policy",
+      "status": 200
+    },
+    {
+      "href": "/privacy-policy",
+      "status": 200
+    },
+    {
+      "href": "/policy/Anti-Bribery-Corruption-and-Fraud-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Anti-Facilitation-of-Tax-Evasion-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Carbon-Management-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Data-Breach-Response-Procedure.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Data-Retention-Schedule.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Data-Subject-Access-Request.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Energy-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Environmental-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Equity-Diversity-and-Inclusion-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/GDPR-policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Health-and-Safety-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Mobile-Phone.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Modern-Slavery-and-Human-Trafficking-Statement.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Quality-Management-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Security-Management-Policy-and-Code-of-Conduct.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Subcontractor Terms and Conditions.pdf",
+      "status": 200
+    },
+    {
+      "href": "/policy/Sustainable-Procurement-Policy.pdf",
+      "status": 200
+    },
+    {
+      "href": "/sectors/offshore",
+      "status": 200
+    },
+    {
+      "href": "/sectors/utilities",
+      "status": 200
+    },
+    {
+      "href": "/sectors/petrochemical",
+      "status": 200
+    },
+    {
+      "href": "/sectors/marine",
+      "status": 200
+    },
+    {
+      "href": "/sectors/defence",
+      "status": 200
+    },
+    {
+      "href": "/sectors/healthcare",
+      "status": 200
+    },
+    {
+      "href": "/sectors/education",
+      "status": 200
+    },
+    {
+      "href": "/sectors/automotive",
+      "status": 200
+    },
+    {
+      "href": "/sectors/agriculture",
+      "status": 200
+    },
+    {
+      "href": "/sectors/energy",
+      "status": 200
+    },
+    {
+      "href": "/sectors/entertainment",
+      "status": 200
+    },
+    {
+      "href": "/sectors/sports",
+      "status": 200
+    },
+    {
+      "href": "/services/customs",
+      "status": 200
+    },
+    {
+      "href": "/services/hazardous-storage",
+      "status": 200
+    },
+    {
+      "href": "/services/lithium-storage",
+      "status": 200
+    },
+    {
+      "href": "/services/hazardous-waste",
+      "status": 200
+    },
+    {
+      "href": "/services/3pl-distribution",
+      "status": 200
+    },
+    {
+      "href": "/class-1-storage",
+      "status": 200
+    }
+  ],
+  "accessibility": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/get-a-quote",
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "violations": []
+    },
+    {
+      "route": "/services",
+      "violations": []
+    },
+    {
+      "route": "/areas/cumbria",
+      "violations": []
+    },
+    {
+      "route": "/services/adr-dangerous-goods",
+      "violations": []
+    },
+    {
+      "route": "/services/lithium-transport",
+      "violations": []
+    },
+    {
+      "route": "/services/un3480-un3481-transport",
+      "violations": []
+    },
+    {
+      "route": "/services/damaged-defective-battery-transport",
+      "violations": []
+    },
+    {
+      "route": "/services/explosives",
+      "violations": []
+    },
+    {
+      "route": "/services/radioactive",
+      "violations": []
+    },
+    {
+      "route": "/services/express-europe-ni",
+      "violations": []
+    },
+    {
+      "route": "/services/ireland-dangerous-goods",
+      "violations": []
+    },
+    {
+      "route": "/services/time-critical-transport",
+      "violations": []
+    }
+  ],
+  "forms": [
+    "Whitespace-only name rejected before submission",
+    "Success: one intercepted request, optional phone, acknowledgement and reset",
+    "Provider rejection: error displayed and input preserved",
+    "Network failure: error displayed and input preserved"
+  ],
+  "skipped": [
+    {
+      "route": "/employment",
+      "reason": "Historic main branch reads application records; production source and isolated test backend are required. No live data queried."
+    }
+  ],
+  "consoleErrors": [],
+  "sitemap": {
+    "urls": 38,
+    "privateRoutesExcluded": true
+  }
+}

@@ -1,4 +1,5 @@
 export const metadata = {
+    alternates: { canonical: "https://adrcarriers.com/services/hazardous-storage" },
     title: 'Hazardous Goods Storage | ADR Warehousing UK | ADR Carriers Ltd',
     description:
         'Secure ADR-compliant storage for hazardous goods (Classes 1–6, 8, 9). Licensed warehousing, Class 1 via partners. 3PL services, EXII/EXIII, DGSA oversight.',
